@@ -1,0 +1,35 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 100px;
+
+}
+.navbarActive{
+  color:  #007FFF !important;
+  font-weight: 500;
+}
+
+.navbarText{
+  color: #000000 !important;
+  font-weight: 500;
+}
+a:hover{
+ text-decoration: underline !important;
+}
+.textPrimary{
+  color:  #007FFF !important;
+}
+.themeFontLight{
+  font-weight: 300;
+}
+
+.themeFontRegular{
+  font-weight: 400;
+}
+
+.themeFontMedium{
+font-weight: 500;
+}
+
+.themeFontBold{
+  font-weight: 600;
+}

@@ -18,6 +18,9 @@ a:hover{
 .textPrimary{
   color:  #007FFF !important;
 }
+.themeFontExtraLight{
+  font-weight: 200;
+}
 .themeFontLight{
   font-weight: 300;
 }
@@ -32,4 +35,19 @@ font-weight: 500;
 
 .themeFontBold{
   font-weight: 600;
+}
+.themeFontExtraBold{
+  font-weight: 700;
+}
+.hr{
+  width: 50px;
+  height: 5px;
+  background-color: #007FFF !important;
+  margin: 0;
+}
+.whoWeArebg{
+  background-color: #f5f5f5;
+}
+.styleCarousel{
+  background-color: #eff5fb;
 }

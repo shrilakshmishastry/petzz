@@ -1,6 +1,6 @@
 body{
   font-family: 'Poppins', sans-serif;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 
 }
 .navbarActive{
@@ -50,4 +50,25 @@ font-weight: 500;
 }
 .styleCarousel{
   background-color: #eff5fb;
+}
+.cardGrroming{
+  border: 10px solid #007FFF ;
+  border-radius: 10px;
+
+}
+@media screen and (min-width:700px) {
+  .bookNowBtn1{
+    position: absolute;
+     z-index: +1;
+     top:310px;
+     left:100px;
+     background-color: white;
+  }
+  .bookNowBtn2{
+    position: absolute;
+     z-index: +1;
+     top:315px;
+     left:100px;
+     background-color: white;
+  }
 }

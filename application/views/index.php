@@ -33,7 +33,7 @@
 							Services
 						</a>
 						<div class="dropdown-menu " aria-labelledby="dropdown">
-							<a href="#" class="dropdown-item navbarText">
+							<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
 								Grooming
 							</a>
 							<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">

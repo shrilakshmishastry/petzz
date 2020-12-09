@@ -72,3 +72,9 @@ font-weight: 500;
      background-color: white;
   }
 }
+.emailLabel{
+  display: block;
+}
+a{
+  text-decoration: none;
+}

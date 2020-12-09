@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/css/style.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/petzz/css/style.css')?>">
   </head>
   <body>
     <div class="container-fluid">
       <!-- navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white pl-lg-5 pr-lg-5">
         <a href="#" class="navbar-brand navbarActive">
-          <img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+          <img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse ml-5 ml-md-0 mt-3 mt-md-0 " id="navbar">
           <ul class="navbar-nav ml-auto ">
             <li class="nav-item  ml-md-4">
-              <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Index/home'); ?>" class="nav-link navbarText">
+              <a href="<?php echo base_url('/petzz/index.php/Index/home'); ?>" class="nav-link navbarText">
                 Home
               </a>
             </li>
@@ -34,13 +34,13 @@
                 <a href="#" class="dropdown-item navbarActive">
                   Grooming
                 </a>
-                <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
+                <a href="<?php echo base_url('/petzz/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
                   Nutrition Counselling
                 </a>
               </div>
             </li>
             <li class="nav-item  ml-md-4">
-              <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Hello/index')?>" class="nav-link navbarText">
+              <a href="<?php echo base_url('/petzz/index.php/Hello/index')?>" class="nav-link navbarText">
                 Forum
               </a>
             </li>
@@ -56,7 +56,7 @@
       <!-- row for land -->
       <div class="row">
         <div class="col-md-6 ml-lg-5">
-          <img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/grooming.jpeg') ?>" alt="logo">
+          <img class="img-fluid" src="<?php echo base_url('/petzz/images/grooming.jpeg') ?>" alt="logo">
         </div>
         <div class="col-lg-4 col-md-6 mt-lg-5 mt-md-4 pt-lg-5 ">
           <h1 class="themeFontExtraBold align-middle mt-lg-5">
@@ -93,7 +93,7 @@
           <div class="card cardGrroming pb-5 pb-md-0">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petBath1.jpeg') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/petBath1.jpeg') ?>" alt="A beautiful dog image">
               </div>
 
               <h4 class="font-weight-bold themeFontMedium textPrimary ml-lg-4">
@@ -123,7 +123,7 @@
           <div class="card cardGrroming pb-5 pb-md-0">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petBath2.jpeg') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/petBath2.jpeg') ?>" alt="A beautiful dog image">
               </div>
 
               <h4 class="font-weight-bold themeFontMedium textPrimary ml-lg-4">
@@ -156,7 +156,7 @@
           <div class="card cardGrroming pb-5 pb-md-0">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petBath3.jpeg') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/petBath3.jpeg') ?>" alt="A beautiful dog image">
               </div>
 
               <h4 class="font-weight-bold themeFontMedium textPrimary ml-lg-4">
@@ -192,7 +192,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-3 ml-3 ml-md-0">
               <div class="row ">
-                  <img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+                  <img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
               </div>
               <div class="row">
                 <p class="themeFontLight small mt-3 text-left">
@@ -247,7 +247,7 @@
       var aTag = document.createElement('a');
       aTag.className="nav-link navbarText";
       aTag.innerHTML = "Login";
-      aTag.href = "<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Index/login'); ?>"
+      aTag.href = "<?php echo base_url('/petzz/index.php/Index/login'); ?>"
       node.appendChild(aTag);
       console.log(localStorage.getItem('userInfo'));
       ulTag[0].appendChild(node);
@@ -260,7 +260,7 @@
         <a href="#" class="dropdown-item navbarActive">
           Grooming
         </a>
-        <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
+        <a href="<?php echo base_url('/petzz/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
           Nutrition Counselling
         </a>
       </div>
@@ -279,7 +279,7 @@
       aTag.innerHTML ="My Profile";
       li.appendChild(aTag);
       var divDropDown = document.createElement("div");
-      
+
     }
 
     </script>

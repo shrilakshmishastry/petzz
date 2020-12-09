@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/css/style.css')?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('/petzz/css/style.css')?>">
 </head>
   <body>
     <div class="container-fluid">
       <!-- navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white pl-md-5 pr-md-5">
         <a href="#" class="navbar-brand navbarActive">
-          <img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+          <img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse ml-5 ml-md-0 mt-3 mt-md-0 " id="navbar">
           <ul class="navbar-nav ml-auto ">
             <li class="nav-item  ml-md-4">
-              <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Index/home'); ?>" class="nav-link navbarText">
+              <a href="<?php echo base_url('/petzz/index.php/Index/home'); ?>" class="nav-link navbarText">
                 Home
               </a>
             </li>
@@ -31,7 +31,7 @@
   							Services
   						</a>
   						<div class="dropdown-menu " aria-labelledby="dropdown">
-  							<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
+  							<a href="<?php echo base_url('/petzz/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
   								Grooming
   							</a>
   							<a href="#" class="dropdown-item  navbarActive">
@@ -40,7 +40,7 @@
   						</div>
   					</li>
             <li class="nav-item  ml-md-4">
-              <a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Hello/index')?>" class="nav-link navbarText">
+              <a href="<?php echo base_url('/petzz/index.php/Hello/index')?>" class="nav-link navbarText">
                 Forum
               </a>
             </li>
@@ -55,7 +55,7 @@
       <!-- row land -->
       <div class="row  mt-md-2">
         <div class="col-md-4 offset-md-1">
-          <img class="img-fluid " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/nutrition.png') ?>" alt="A beautiful dog image">
+          <img class="img-fluid " src="<?php echo base_url('/petzz/images/nutrition.png') ?>" alt="A beautiful dog image">
         </div>
         <div class="col-md-6 ml-md-5  mt-md-5 pt-lg-5">
           <h1 class="themeFontExtraBold align-middle mt-lg-5">
@@ -71,7 +71,7 @@
       <!-- row for importance of nutrition Counselling -->
       <div class="row whoWeArebg mt-5 mt-md-0 pb-md-5">
         <div class="col-md-6 pt-md-5 d-block d-sm-none ">
-          <img class="img-fluid " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/nut.png') ?>" alt="A beautiful dog image">
+          <img class="img-fluid " src="<?php echo base_url('/petzz/images/nut.png') ?>" alt="A beautiful dog image">
         </div>
         <div class="col-lg-4 col-md-6 offset-lg-2 mt-md-5">
           <h3 class="themeFontBold pt-md-5">Why
@@ -87,7 +87,7 @@
           </p>
         </div>
         <div class="col-md-6 d-none d-sm-block">
-          <img class="img-fluid mt-md-5 mt-lg-0" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/nut.png') ?>" alt="A beautiful dog image">
+          <img class="img-fluid mt-md-5 mt-lg-0" src="<?php echo base_url('/petzz/images/nut.png') ?>" alt="A beautiful dog image">
         </div>
       </div>
       <!-- row for essential ele of nutrition counselling -->
@@ -111,7 +111,7 @@
           <div class="card shadow">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/vegetables.png') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/vegetables.png') ?>" alt="A beautiful dog image">
               </div>
 
               <h6 class="font-weight-bold">Diet Chart</h6>
@@ -124,7 +124,7 @@
           <div class="card shadow">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/diet.png') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/diet.png') ?>" alt="A beautiful dog image">
               </div>
 
               <h6 class="font-weight-bold">Proper Nutrient Intake</h6>
@@ -137,7 +137,7 @@
           <div class="card shadow">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/calories.png') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/calories.png') ?>" alt="A beautiful dog image">
               </div>
 
               <h6 class="font-weight-bold">Proper Calorie Intake</h6>
@@ -152,7 +152,7 @@
           <div class="card shadow">
             <div class="card-body">
               <div class=" text-center">
-                  <img class="img-fluid mb-3" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/feed.png') ?>" alt="A beautiful dog image">
+                  <img class="img-fluid mb-3" src="<?php echo base_url('/petzz/images/feed.png') ?>" alt="A beautiful dog image">
               </div>
 
               <h6 class="font-weight-bold">Right Diet Constituents</h6>
@@ -185,11 +185,11 @@
         </div>
       </div>
       <!-- footer -->
-  		<footer>
+  		<footer class="ps-2 ">
   			<div class="row justify-content-center mt-5">
   					<div class="col-md-3 ml-3 ml-md-0">
   						<div class="row ">
-  								<img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+  								<img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
   						</div>
   						<div class="row">
   							<p class="themeFontLight small mt-3 text-left">

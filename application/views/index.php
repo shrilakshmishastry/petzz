@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/css/style.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/petzz/css/style.css')?>">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 		<!-- navigation bar -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-white">
 			<a href="#" class="navbar-brand navbarActive">
-				<img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+				<img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -33,16 +33,16 @@
 							Services
 						</a>
 						<div class="dropdown-menu " aria-labelledby="dropdown">
-							<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
+							<a href="<?php echo base_url('/petzz/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
 								Grooming
 							</a>
-							<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
+							<a href="<?php echo base_url('/petzz/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
 								Nutrition Counselling
 							</a>
 						</div>
 					</li>
 					<li class="nav-item  ml-md-4">
-						<a href="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/index.php/Hello/index')?>" class="nav-link navbarText">
+						<a href="<?php echo base_url('/petzz/index.php/Hello/index')?>" class="nav-link navbarText">
 							Forum
 						</a>
 					</li>
@@ -67,7 +67,7 @@
 				</a>
 			</div>
 			<div class="col-md-6 mt-md-5">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/3.png') ?>" alt="A beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/3.png') ?>" alt="A beautiful dog image">
 			</div>
 		</div>
 		<!-- row of who we are -->
@@ -82,7 +82,7 @@
 		<!-- row for img of cats -->
 		<div class="row justify-content-center whoWeArebg">
 			<div class="col-md-8">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/who_we_are_below_img-removebg-preview.png') ?>" alt="Group of images">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/who_we_are_below_img-removebg-preview.png') ?>" alt="Group of images">
 			</div>
 		</div>
 		<!-- row for Services -->
@@ -96,13 +96,13 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 col-lg-5  mt-5 ">
 						<div class=" d-inline-flex">
-							<img class="mr-3 " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/bone.png') ?>" alt="bone image">
+							<img class="mr-3 " src="<?php echo base_url('/petzz/images/bone.png') ?>" alt="bone image">
 							<p class="themeFontMedium text-left pt-3 h5">
 								Food will be delivered to your home
 							</p>
 						</div>
 						<div class=" d-inline-flex mt-5">
-							<img class="mr-3 " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/bone.png') ?>" alt="bone image">
+							<img class="mr-3 " src="<?php echo base_url('/petzz/images/bone.png') ?>" alt="bone image">
 							<p class="themeFontMedium text-left pt-3 h5">
 								Food will be delivered to your home
 							</p>
@@ -110,13 +110,13 @@
 					</div>
 					<div class="col-md-6 col-lg-5   mt-5 ">
 						<div class=" d-inline-flex">
-							<img class="mr-3 " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/bone.png') ?>" alt="bone image">
+							<img class="mr-3 " src="<?php echo base_url('/petzz/images/bone.png') ?>" alt="bone image">
 							<p class="themeFontMedium text-left pt-3 h5">
 								Food will be delivered to your home
 							</p>
 						</div>
 						<div class=" d-inline-flex mt-5">
-							<img class="mr-3 " src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/bone.png') ?>" alt="bone image">
+							<img class="mr-3 " src="<?php echo base_url('/petzz/images/bone.png') ?>" alt="bone image">
 							<p class="themeFontMedium text-left pt-3 h5">
 								Food will be delivered to your home
 							</p>
@@ -125,16 +125,16 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-none d-sm-block ">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/services_side_dog.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/services_side_dog.png') ?>" alt="beautiful dog image">
 			</div>
 			<div class="d-block d-sm-none">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/5.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/5.png') ?>" alt="beautiful dog image">
 			</div>
 		</div>
 		<!-- row for why petzz -->
 		<div class="row mt-5 whoWeArebg pb-md-5 pb-lg-0">
 			<div class="col-md-6 d-none d-sm-block ">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/6.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/6.png') ?>" alt="beautiful dog image">
 			</div>
 			<div class="col-md-5 col-lg-3 mt-5 ml-3  ">
 				<div class="d-flex flex-row pl-md-3">
@@ -175,7 +175,7 @@
 
 			</div>
 			<div class=" d-block d-sm-none ">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/6.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/6.png') ?>" alt="beautiful dog image">
 			</div>
 		</div>
 
@@ -199,7 +199,7 @@
 				</a>
 			</div>
 			<div class="col-md-6 ">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/book_service.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/book_service.png') ?>" alt="beautiful dog image">
 
 			</div>
 			<div class="col-md-1 ">
@@ -216,7 +216,7 @@
 		<!-- row for cat advance
 		<div class="row mt-5 whoWeArebg">
 			<div class="col-md-6 mt-lg-5 mt-md-5  d-none d-sm-block">
-				<img class="img-fluid mt-md-5 mt-lg-0" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/8.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid mt-md-5 mt-lg-0" src="<?php echo base_url('/petzz/images/8.png') ?>" alt="beautiful dog image">
 			</div>
 			<div class="col-md-4 col-lg-4  mt-5">
 				<h5 class="themeFontMedium pr-lg-5 pl-md-4 mr-lg-5">
@@ -241,7 +241,7 @@
 
 			</div>
 			<div class="d-block d-sm-none">
-				<img class="img-fluid" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/8.png') ?>" alt="beautiful dog image">
+				<img class="img-fluid" src="<?php echo base_url('/petzz/images/8.png') ?>" alt="beautiful dog image">
 			</div>
 		</div> -->
 		<!-- row for testimonals -->
@@ -257,7 +257,7 @@
 					</div>
 					<div class="row justify-content-center mt-5">
 						<div class="col-md-2 col-8 offset-md-2">
-							<img class="img-fluid rounded-circle" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/girl.jpg') ?>" alt="beautiful dog image">
+							<img class="img-fluid rounded-circle" src="<?php echo base_url('/petzz/images/girl.jpg') ?>" alt="beautiful dog image">
 						</div>
 						<div class="col-md-6 col-8 mt-5 mt-md-0 pl-md-5">
 							<div class="row ">
@@ -288,7 +288,7 @@
 					</div>
 					<div class="row justify-content-center mt-5">
 						<div class="col-md-2 col-8  offset-md-2">
-							<img class="img-fluid rounded-circle" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/girl.jpg') ?>" alt="beautiful dog image">
+							<img class="img-fluid rounded-circle" src="<?php echo base_url('/petzz/images/girl.jpg') ?>" alt="beautiful dog image">
 						</div>
 						<div class="col-md-6 col-8 mt-5 mt-md-0 pl-md-5">
 							<div class="row ">
@@ -319,7 +319,7 @@
 					</div>
 					<div class="row justify-content-center mt-5">
 						<div class="col-md-2 col-8 offset-md-2">
-							<img class="img-fluid rounded-circle" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/girl.jpg') ?>" alt="beautiful dog image">
+							<img class="img-fluid rounded-circle" src="<?php echo base_url('/petzz/images/girl.jpg') ?>" alt="beautiful dog image">
 						</div>
 						<div class="col-md-6 col-8 mt-5 mt-md-0 pl-md-5">
 							<div class="row ">
@@ -356,7 +356,7 @@
 			<div class="row justify-content-center mt-5">
 					<div class="col-md-3 ml-3 ml-md-0">
 						<div class="row ">
-								<img class="" src="<?php echo base_url('/bcit-ci-CodeIgniter-b73eb19/images/petzz.png') ?>" alt="logo">
+								<img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
 						</div>
 						<div class="row">
 							<p class="themeFontLight small mt-3 text-left">

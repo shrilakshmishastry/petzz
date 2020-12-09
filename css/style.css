@@ -78,3 +78,12 @@ font-weight: 500;
 a{
   text-decoration: none;
 }
+.textSecondary{
+  color: #007FFF;
+}
+.cardBodyColor{
+  background-color: #CCE5FF;
+}
+.imgCard{
+  height: 150px;
+}

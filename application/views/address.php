@@ -11,7 +11,6 @@
 </head>
 	<body >
 		<div class="container-fluid ">
-			<!-- row land -->
       <!-- navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a href="#" class="navbar-brand navbarActive">

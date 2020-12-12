@@ -23,7 +23,7 @@
 				aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse  d-flex mr-lg-5  pr-md-5 justify-content-end mt-3 mt-md-0 " id="navbar">
+		<div class="collapse navbar-collapse  d-lg-flex mr-lg-5  pr-md-5 justify-content-lg-end mt-3 mt-md-0 " id="navbar">
 			<ul class="navbar-nav ml-md-5">
 				<li class="nav-item  ml-md-4">
 					<a href="#" class="nav-link navbarActive">
@@ -397,7 +397,7 @@
 					<a href="/petzz/" class="text-dark">Home</a>
 				</p>
 				<p class="themeFontRegular mb-2">
-					<a href="#" class="text-dark">Forum</a>
+					<a href="/petzz/forum" class="text-dark">Forum</a>
 				</p>
 			</div>
 			<div class="col-md-2 mt-5 mt-md-4 ">
@@ -405,7 +405,7 @@
 				<p class="themeFontLight mb-2">
 					<a href="/petzz/grooming" class="text-dark">Grooming</a>
 				</p>
-				<p class="themeFontRegular mb-2">
+				<p class="themeFontLight mb-2">
 					<a href="/petzz/nutrition-counselling" class="text-dark">Nutrition Counselling</a>
 				</p>
 			</div>

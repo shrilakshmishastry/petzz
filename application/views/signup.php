@@ -17,13 +17,13 @@
 		<a href="#" class="navbar-brand navbarActive">
 			<img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" >
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse ms-5 ms-md-0 mt-3 mt-md-0 " id="navbar">
 			<ul class="navbar-nav ms-auto pe-lg-5 me-lg-5">
 				<li class="nav-item  ms-md-4">
-					<a href="#" class="nav-link navbarText">
+					<a href="/petzz/" class="nav-link navbarText">
 						Home
 					</a>
 				</li>
@@ -33,17 +33,17 @@
 						Services
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="navbarText dropdown-item" href="#">Grooming</a></li>
-						<li><a class="navbarText dropdown-item" href="#">Nutrition Counselling</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
 					</ul>
 				</li>
 				<li class="nav-item  ms-md-4">
-					<a href="<?php echo base_url('/petzz/index.php/Hello/index')?>" class="nav-link navbarText">
+					<a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarText">
 						Forum
 					</a>
 				</li>
 				<li class="nav-item  ms-md-4">
-					<a href="#" class="nav-link navbarText">
+					<a href="#footer" class="nav-link navbarText">
 						Contact us
 					</a>
 				</li>
@@ -52,8 +52,8 @@
 
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="navbarText dropdown-item" href="#">Order History</a></li>
-						<li><a class="navbarText dropdown-item" href="#">Logout</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -112,7 +112,7 @@
 		</div>
 	</div>
 	<!-- footer -->
-	<footer class="mt-5 pt-lg-5 ps-2 ">
+	<footer id="footer" class="mt-5 pt-lg-5 ps-2 ">
 		<div class="row justify-content-center mt-5">
 			<div class="col-md-3 ms-3 ms-md-0">
 				<div class="row ">
@@ -130,20 +130,20 @@
 			</div>
 			<div class="col-md-2 mt-5 mt-md-4 ps-md-5 ">
 				<p class="themeFontMedium ">Company</p>
-				<p class="themeFontLight mb-2">
-					<a href="#"class="text-dark" >Home</a>
+				<p class="themeFontRegular mb-2">
+					<a href="/petzz/"class="text-dark" >Home</a>
 				</p>
 				<p class="themeFontRegular mb-2">
-					<a href="#"class="text-dark" >Forum</a>
+					<a href="/petzz/forum"class="text-dark" >Forum</a>
 				</p>
 			</div>
 			<div class="col-md-2 mt-5 mt-md-4 ">
 				<p class="themeFontMedium ">Service</p>
-				<p class="themeFontLight mb-2">
-					<a href="#"class="text-dark" >Grooming</a>
+				<p class="themeFontRegular mb-2">
+					<a href="/petzz/grooming"class="text-dark" >Grooming</a>
 				</p>
 				<p class="themeFontRegular mb-2">
-					<a href="#"class="text-dark" >Nutrition Counselling</a>
+					<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
 				</p>
 			</div>
 			<div class="col-md-3 mt-5 mt-md-4">
@@ -163,6 +163,8 @@
 		</div>
 	</footer>
 </div>
+<!-- link for fontawesome -->
+<script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/signup.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
@@ -170,14 +172,14 @@
 <script type="text/javascript">
 
 	var sessionValue = "<?php echo $this->session->userdata('email');?>";
-	console.log(sessionValue);
+
 	if (sessionValue.length==0) {
 		const ulTag = document.getElementsByClassName('navbar-nav');
 		var node = document.createElement("li");
-		node.className = "nav-item  ml-md-4";
+		node.className = "nav-item  ms-md-4";
 		var aTag = document.createElement('a');
-		aTag.className="nav-link navbarText";
-		aTag.innerHTML = "Login";
+		aTag.className="nav-link navbarActive";
+		aTag.innerHTML = "Signup";
 		aTag.href = "#";
 		node.appendChild(aTag);
 		console.log(localStorage.getItem('userInfo'));
@@ -185,7 +187,7 @@
 	}
 	else{
 		var profileUl = document.getElementById("profile");
-		profileUl.className="nav-item dropdown ml-4";
+		profileUl.className="nav-item dropdown ms-4";
 		profileUl.childNodes[1].innerHTML = sessionValue;
 	}
 

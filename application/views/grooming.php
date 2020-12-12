@@ -188,7 +188,7 @@
       </div>
 
       <!-- footer -->
-      <footer>
+      <footer id="footer">
         <div class="row justify-content-center mt-5">
             <div class="col-md-3 ml-3 ml-md-0">
               <div class="row ">
@@ -207,19 +207,19 @@
             <div class="col-md-2 mt-5 mt-md-4 pl-md-5 ">
               <p class="themeFontMedium ">Company</p>
               <p class="themeFontLight mb-2">
-                <a href="#"class="text-dark" >Home</a>
+                <a href="/petzz/"class="text-dark" >Home</a>
               </p>
-              <p class="themeFontRegular mb-2">
-                <a href="#"class="text-dark" >Forum</a>
+              <p class="themeFontLight  mb-2">
+                <a href="/petzz/forum/"class="text-dark" >Forum</a>
               </p>
             </div>
             <div class="col-md-2 mt-5 mt-md-4 ">
               <p class="themeFontMedium ">Service</p>
               <p class="themeFontLight mb-2">
-                <a href="#"class="text-dark" >Grooming</a>
+                <a href="/petzz/grooming/"class="text-dark" >Grooming</a>
               </p>
-              <p class="themeFontRegular mb-2">
-                <a href="#"class="text-dark" >Nutrition Counselling</a>
+              <p class="themeFontLight  mb-2">
+                <a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
               </p>
             </div>
             <div class="col-md-3 mt-5 mt-md-4">
@@ -239,7 +239,27 @@
         </div>
       </footer>
     </div>
+	<script type="text/javascript">
 
+		var sessionValue = "<?php echo $this->session->userdata('email');?>";
+		if (sessionValue.length == 0) {
+			const ulTag = document.getElementsByClassName('navbar-nav');
+			var node = document.createElement("li");
+			node.className = "nav-item  ml-md-4";
+			var aTag = document.createElement('a');
+			aTag.href = "<?php echo base_url('/petzz/login'); ?>"
+			aTag.className = "nav-link navbarText";
+			aTag.innerHTML = "Login";
+			node.appendChild(aTag);
+			console.log(localStorage.getItem('userInfo'));
+			ulTag[0].appendChild(node);
+		} else {
+			var profileUl = document.getElementById("profile");
+			profileUl.className = "nav-item dropdown ml-4";
+			profileUl.childNodes[1].innerHTML = sessionValue;
+		}
+
+	</script>
 
     <!-- link for fontawesome -->
   	<script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>

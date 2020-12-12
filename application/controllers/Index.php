@@ -10,7 +10,13 @@ class Index extends CI_Controller
   {
     // code...
     $this->load->helper('url');
-    $this->load->view('index');    
+    $this->load->view('index');
+  }
+  public function login()
+  {
+    // code...
+    $this->load->helper('url');
+    $this->load->view('login');
   }
 
 }

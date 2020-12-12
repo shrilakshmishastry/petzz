@@ -169,7 +169,7 @@
 				aTag1.ariaHaspopup="true";
 				aTag1.ariaExpanded="false"
 				aTag1.innerHTML ="My Profile";
-				li.appendChild(aTag);
+				li.appendChild(aTag1);
 				var divDropDown = document.createElement("div");
 
 			}

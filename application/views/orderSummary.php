@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pet Adoption | Pet Services | Nutrition Counselling</title>
-  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/petzz/css/style.css')?>">
 </head>
-	<body>
-		<div class="container-fluid">
+  <body>
+    <div class="container-fluid">
       <!-- navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a href="#" class="navbar-brand navbarActive">
@@ -21,7 +21,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse ms-5 ms-md-0 mt-3 mt-md-0 " id="navbar">
-          <ul class="navbar-nav ms-auto pe-lg-5 me-lg-5">
+          <ul class="navbar-nav ms-auto ">
             <li class="nav-item  ms-md-4">
               <a href="#" class="nav-link navbarText">
                 Home
@@ -47,72 +47,11 @@
                 Contact us
               </a>
             </li>
-			  <li class="nav-item dropdown ms-md-4 d-none" id="profile">
-				  <a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-				  </a>
-				  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <li><a class="navbarText dropdown-item" href="#">Order History</a></li>
-					  <li><a class="navbarText dropdown-item" href="#">Logout</a></li>
-				  </ul>
-			  </li>
           </ul>
-
         </div>
       </nav>
-			<!-- row land -->
-			<div class="row">
-
-				<div class="col-md-6 col-lg-3 offset-lg-1  mt-lg-5">
-					<div class="row mt-lg-3">
-							<img class="img-fluid" src="<?php echo base_url('/petzz/images/logoLarge.png') ?>" alt="logo">
-					</div>
-          <!-- row for user name -->
-					<div class="row  mt-5 pl-3 ">
-						<form >
-							<label class="themeFontMedium h4 textPrimary" for="Full	Name">
-							Full	Name
-							</label>
-							<input  type="text" name="FullName" class="bg-white border-top-0 border-end-0 border-start-0 border-info "  id="FullName" value="" placeholder=""  required>
-						</div>
-						<!-- row for name -->
-						<div class="row mt-5 pl-3 ">
-							<label class="themeFontMedium emailLabel h4 textPrimary" for="Email">
-								Email
-							</label>
-						</div>
-						<div class="row  pl-3">
-							<input type="email" name="Email" class="bg-white border-top-0 border-end-0 border-start-0 border-info "  id="Email" value="" placeholder=""  required>
-						</div>
-						<!-- row for password -->
-						<div class="row  mt-5 pl-3 ">
-							<label class="themeFontMedium h4 textPrimary" for="Password">
-								Password
-							</label>
-							<input type="password" name="Password" class="bg-white border-top-0 border-end-0 border-start-0 border-info "  id="Password" value="" placeholder=""  required>
-						</div>
-						<!-- row for submit btn -->
-							<div class="mt-4">
-								<button  type="submit" id="submit"  class="pe-lg-5 ps-lg-5 themeFontMedium mt-3 btn btn-outline-primary pl-lg-5 rounded-pill pr-lg-5">
-									Submit
-								</button>
-						</form>
-
-            </div>
-
-					<!-- row for dont't have an account -->
-					<div class="row mt-3">
-						<p class="mb-0 themeFontMedium">Have an account!! &nbsp;
-						<a href="<?php echo base_url('/petzz/index.php/Login/index') ?>" class="textPrimary">Login </a>&nbsp; Now
-            </p>
-					</div>
-				</div>
-        <div class="col-md-6 pr-md-0  col-lg-7 offset-lg-1 d-none d-sm-block position-relative">
-          <img class="img-fluid position-absolute top-0 end-0" src="<?php echo base_url('/petzz/images/loginDog.png') ?>" alt="beautiful dog image">
-        </div>
-			</div>
       <!-- footer -->
-      <footer class="mt-5 pt-lg-5 ps-2 ">
+      <footer class="ps-2 ">
         <div class="row justify-content-center mt-5">
             <div class="col-md-3 ms-3 ms-md-0">
               <div class="row ">
@@ -162,33 +101,8 @@
             </div>
         </div>
       </footer>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo  base_url('/petzz/js/signup.js') ?>"></script>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-		<script type="text/javascript">
-
-			var sessionValue = "<?php echo $this->session->userdata('email');?>";
-			console.log(sessionValue);
-			if (sessionValue.length==0) {
-				const ulTag = document.getElementsByClassName('navbar-nav');
-				var node = document.createElement("li");
-				node.className = "nav-item  ml-md-4";
-				var aTag = document.createElement('a');
-				aTag.className="nav-link navbarText";
-				aTag.innerHTML = "Login";
-				aTag.href = "#";
-				node.appendChild(aTag);
-				console.log(localStorage.getItem('userInfo'));
-				ulTag[0].appendChild(node);
-			}
-			else{
-				var profileUl = document.getElementById("profile");
-				profileUl.className="nav-item dropdown ml-4";
-				profileUl.childNodes[1].innerHTML = sessionValue;
-			}
-
-		</script>
-	</body>
+  </body>
 </html>

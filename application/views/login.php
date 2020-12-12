@@ -22,7 +22,7 @@
 				<div class="collapse navbar-collapse ms-5 ms-md-0 mt-3 mt-md-0 " id="navbar">
 					<ul class="navbar-nav ms-auto ">
 						<li class="nav-item  ms-md-4">
-							<a href="#" class="nav-link navbarText">
+							<a href="<?php echo base_url('petzz/index.php/Index/home') ?>" class="nav-link navbarText">
 								Home
 							</a>
 						</li>
@@ -59,32 +59,35 @@
 							<img class="img-fluid" src="<?php echo base_url('/petzz/images/logoLarge.png') ?>" alt="logo">
 					</div>
 					<!-- row for name -->
-					<div class="row mt-5 ps-3 ">
-						<label class="themeFontMedium emailLabel h4 textPrimary" for="Email">
-							Email
-						</label>
-					</div>
-					<div class="row  ps-3">
-						<input type="text" name="Email" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Email" value="" placeholder=""  required>
-					</div>
-					<!-- row for password -->
-					<div class="row  mt-5 ps-3 ">
-						<label class="themeFontMedium h4 textPrimary" for="Password">
-							Password
-						</label>
-						<input type="password" name="Password" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Password" value="" placeholder=""  required>
-					</div>
-					<!-- row for submit btn -->
-					<div class="mt-4">
-						<a href="#" class="pe-lg-5 ps-lg-5 themeFontMedium mt-3 btn btn-outline-primary pl-lg-5 rounded-pill pr-lg-5">
-							Submit
-						</a>
-					</div>
-					<!-- row for dont't have an account -->
-					<div class="row mt-3">
-						<p class="themeFontMedium">Don't have an account yet!!</p>&nbsp;
-						<a href="#" class="textPrimary">Sign Up Now </a>
-					</div>
+					<form>
+						<div class="row mt-5 ps-3 ">
+							<label class="themeFontMedium emailLabel h4 textPrimary" for="Email">
+								Email
+							</label>
+						</div>
+						<div class="row  ps-3">
+							<input type="text"  name="Email" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Email" value="" placeholder=""  required>
+						</div>
+						<!-- row for password -->
+						<div class="row  mt-5 ps-3 ">
+							<label class="themeFontMedium h4 textPrimary" for="Password">
+								Password
+							</label>
+							<input type="password" name="Password" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Password" value="" placeholder=""  required>
+						</div>
+						<!-- row for submit btn -->
+						<div class="mt-4">
+							<button type="submit" id="submit" class="pe-lg-5 ps-lg-5 themeFontMedium mt-3 btn btn-outline-primary pl-lg-5 rounded-pill pr-lg-5">
+								Submit
+							</button>
+						</div>
+						<!-- row for dont't have an account -->
+						<div class="row mt-3">
+							<p class="themeFontMedium">Don't have an account yet!!</p>&nbsp;
+							<a href="<?php echo base_url('/petzz/index.php/Signup/index') ?>" class="textPrimary">Sign Up Now </a>
+						</div>
+					</form>
+
 				</div>
 			</div>
 
@@ -141,6 +144,39 @@
 			</footer>
 
 		</div>
+		<script type="text/javascript">
+			if (localStorage.getItem('name')===null) {
+				const ulTag = document.getElementsByClassName('navbar-nav');
+				var node = document.createElement("li");
+				node.className = "nav-item  ml-md-4";
+				var aTag = document.createElement('a');
+				aTag.className="nav-link navbarText";
+				aTag.innerHTML = "Login";
+				aTag.href = "#";
+				node.appendChild(aTag);
+				console.log(localStorage.getItem('userInfo'));
+				ulTag[0].appendChild(node);
+			}
+			else{
+				const ulTag = document.getElementsByClassName('navbar-nav');
+				var li = document.createElement("li");
+				li.className = "nav-item dropdown   ml-md-4";
+				var aTag1 = document.createElement("a");
+				aTag1.className="nav-link dropdown-toggle";
+				aTag1.id = "profile";
+				aTag1.role="button";
+				aTag1.dataToggle="dropdown";
+				aTag1.ariaHaspopup="true";
+				aTag1.ariaExpanded="false"
+				aTag1.innerHTML ="My Profile";
+				li.appendChild(aTag);
+				var divDropDown = document.createElement("div");
+
+			}
+
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo  base_url('/petzz/js/login.js') ?>"></script>
 		<!-- link for fontawesome -->
 		<script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
 		<!-- jQuery library -->

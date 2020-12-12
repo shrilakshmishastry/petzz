@@ -239,50 +239,7 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript">
-    if (localStorage.getItem('userInfo')===null) {
-      const ulTag = document.getElementsByClassName('navbar-nav');
-      var node = document.createElement("li");
-      node.className = "nav-item  ml-md-4";
-      var aTag = document.createElement('a');
-      aTag.className="nav-link navbarText";
-      aTag.innerHTML = "Login";
-      aTag.href = "<?php echo base_url('/petzz/index.php/Index/login'); ?>"
-      node.appendChild(aTag);
-      console.log(localStorage.getItem('userInfo'));
-      ulTag[0].appendChild(node);
-    }
-    <li class="nav-item dropdown  ml-md-4">
-      <a href="#" class="nav-link dropdown-toggle navbarActive" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Services
-      </a>
-      <div class="dropdown-menu " aria-labelledby="dropdown">
-        <a href="#" class="dropdown-item navbarActive">
-          Grooming
-        </a>
-        <a href="<?php echo base_url('/petzz/index.php/NutritionCounselling/index'); ?>" class="dropdown-item navbarText">
-          Nutrition Counselling
-        </a>
-      </div>
-    </li>
-    else{
-      const ulTag = document.getElementsByClassName('navbar-nav');
-      var li = document.createElement("li");
-      li.className = "nav-item dropdown   ml-md-4";
-      var aTag = document.createElement("a");
-      aTag.className="nav-link dropdown-toggle";
-      aTag.id = "profile";
-      aTag.role="button";
-      aTag.data-toggle="dropdown";
-      aTag.aria-haspopup="true";
-      aTag.aria-expanded="false"
-      aTag.innerHTML ="My Profile";
-      li.appendChild(aTag);
-      var divDropDown = document.createElement("div");
 
-    }
-
-    </script>
 
     <!-- link for fontawesome -->
   	<script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>

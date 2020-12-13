@@ -56,11 +56,11 @@ font-weight: 500;
   border-radius: 10px;
 
 }
-@media screen and (min-width:700px) {
+@media screen and (min-width:770px) {
   .bookNowBtn1{
     position: absolute;
      z-index: +1;
-     top:310px;
+     top:295px;
      left:100px;
      background-color: white;
   }
@@ -86,4 +86,7 @@ a{
 }
 .imgCard{
   height: 150px;
+}
+#logout:hover{
+	text-decoration: underline;
 }

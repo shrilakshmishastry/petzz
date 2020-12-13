@@ -42,11 +42,11 @@
 						Forum
 					</a>
 				</li>
-				<li class="nav-item  ms-md-4">
-					<a href="#footer" class="nav-link navbarText">
-						Contact us
-					</a>
-				</li>
+<!--				<li class="nav-item  ms-md-4">-->
+<!--					<a href="#footer" class="nav-link navbarText">-->
+<!--						Contact us-->
+<!--					</a>-->
+<!--				</li>-->
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
@@ -144,6 +144,9 @@
 				</p>
 				<p class="themeFontRegular mb-2">
 					<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
+				</p>
+				<p class="themeFontLight mb-2">
+					<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
 				</p>
 			</div>
 			<div class="col-md-3 mt-5 mt-md-4">

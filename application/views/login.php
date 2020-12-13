@@ -41,18 +41,18 @@
 						Forum
 					</a>
 				</li>
-				<li class="nav-item  ms-md-4">
-					<a href="#footer" class="nav-link navbarText">
-						Contact us
-					</a>
-				</li>
+<!--				<li class="nav-item  ms-md-4">-->
+<!--					<a href="#footer" class="nav-link navbarText">-->
+<!--						Contact us-->
+<!--					</a>-->
+<!--				</li>-->
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
-						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
+						<li><p  class="navbarText dropdown-item" href="/petzz/logout/">Logout</p></li>
 					</ul>
 				</li>
 			</ul>
@@ -87,7 +87,7 @@
 				<!-- row for submit btn -->
 				<div class="mt-4">
 					<button type="submit" id="submit" class="pe-lg-5 ps-lg-5 themeFontMedium mt-3 btn btn-outline-primary pl-lg-5 rounded-pill pr-lg-5">
-						Submit
+						Login
 					</button>
 				</div>
 				<!-- row for dont't have an account -->
@@ -133,6 +133,9 @@
 				</p>
 				<p class="themeFontLight mb-2">
 					<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
+				</p>
+				<p class="themeFontLight mb-2">
+					<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
 				</p>
 			</div>
 			<div class="col-md-3 mt-5 mt-md-4">

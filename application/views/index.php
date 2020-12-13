@@ -42,6 +42,9 @@
 						<a href="/petzz/nutrition-counselling" class="dropdown-item navbarText">
 							Nutrition Counselling
 						</a>
+						<a href="/petzz/pet-adoption" class="dropdown-item navbarText">
+							Pet Adoption
+						</a>
 					</div>
 				</li>
 				<li class="nav-item  ml-md-4">
@@ -49,18 +52,18 @@
 						Forum
 					</a>
 				</li>
-				<li class="nav-item  ml-md-4">
-					<a href="#footer" class="nav-link navbarText">
-						Contact us
-					</a>
-				</li>
+				<!--				<li class="nav-item  ml-md-4">-->
+				<!--					<a href="#footer" class="nav-link navbarText">-->
+				<!--						Contact us-->
+				<!--					</a>-->
+				<!--				</li>-->
 				<li id="profile" class="nav-item dropdown ml-4 d-none">
 					<a class="nav-link dropdown-toggle navbarText " href="#" id="navbarDropdown" role="button"
 					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item navbarText" href="/petzz/order-history">Order History</a>
-						<a class="dropdown-item navbarText" href="/petzz/logout">Logout</a>
+						<button class="dropdown-item mb-0 navbarText" href="" id="logout" >Logout</button>
 					</div>
 				</li>
 			</ul>
@@ -408,6 +411,9 @@
 				<p class="themeFontLight mb-2">
 					<a href="/petzz/nutrition-counselling" class="text-dark">Nutrition Counselling</a>
 				</p>
+				<p class="themeFontLight mb-2">
+					<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
+				</p>
 			</div>
 			<div class="col-md-3 mt-5 mt-md-4">
 				<p class="themeFontRegular ">Contact us on help@petzz.com </p>
@@ -448,10 +454,14 @@
 	}
 
 </script>
+<!--link for jquery cookie-->
+
 <!-- link for fontawesome -->
 <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs"></script>
+<script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

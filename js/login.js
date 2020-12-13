@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 			}
 			else if(data === 'user  does not exist'){
-				var alertBox =  $("<div></div>").text("User doesn;t exist. Please signup");
+				var alertBox =  $("<div></div>").text("User doesn't exist. Please signup");
 				alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
 				alertBox.attr("role","alert");
 				var button = $("<button></button>");

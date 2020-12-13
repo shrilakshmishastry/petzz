@@ -46,12 +46,8 @@ class Login extends CI_Controller
 				$res="incorrect password";
 			}
 		}
-
-
 		echo $res;
 
 	}
 }
-
-
 ?>

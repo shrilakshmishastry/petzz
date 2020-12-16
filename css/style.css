@@ -18,6 +18,9 @@ a:hover{
 .textPrimary{
   color:  #007FFF !important;
 }
+.textSecondary{
+	color:#44A1FF !important;
+}
 .themeFontExtraLight{
   font-weight: 200;
 }
@@ -89,4 +92,15 @@ a{
 }
 #logout:hover{
 	text-decoration: underline;
+}
+.quantityCart{
+	background-color: #CCE5FF;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	border-radius: 15px;
+}
+.textSmall{
+	font-size: 15px;
 }

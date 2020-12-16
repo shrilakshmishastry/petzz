@@ -12,7 +12,7 @@
 <body>
 <div class="container-fluid">
 	<!-- navigation bar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-white pl-md-5 pr-md-5">
+	<nav class="navbar navbar-expand-lg navbar-light bg-white pl-lg-5 pr-lg-5">
 		<a href="#" class="navbar-brand navbarActive">
 			<img class="" src="<?php echo base_url('/petzz/images/petzz.png') ?>" alt="logo">
 		</a>
@@ -22,7 +22,7 @@
 		<div class="collapse navbar-collapse ml-5 ml-md-0 mt-3 mt-md-0 " id="navbar">
 			<ul class="navbar-nav ml-auto ">
 				<li class="nav-item  ml-md-4">
-					<a href="<?php echo base_url('/petzz/index.php/Index/home'); ?>" class="nav-link navbarText">
+					<a href="<?php echo base_url('/petzz/'); ?>" class="nav-link navbarText">
 						Home
 					</a>
 				</li>
@@ -31,27 +31,36 @@
 						Services
 					</a>
 					<div class="dropdown-menu " aria-labelledby="dropdown">
-						<a href="<?php echo base_url('/petzz/index.php/Grooming/index'); ?>" class="dropdown-item navbarText">
+						<a href="/petzz/grooming" class="dropdown-item navbarActive">
 							Grooming
 						</a>
-						<a href="#" class="dropdown-item  navbarActive">
+						<a href="<?php echo base_url('#'); ?>" class="dropdown-item navbarText">
 							Nutrition Counselling
+						</a>
+						<a href="<?php echo base_url('/petzz/pet-adoption'); ?>" class="dropdown-item navbarText">
+							Pet Adoption
 						</a>
 					</div>
 				</li>
 				<li class="nav-item  ml-md-4">
-					<a href="<?php echo base_url('/petzz/index.php/Hello/index')?>" class="nav-link navbarText">
+					<a href="<?php echo base_url('/petzz/forum')?>" class="nav-link navbarText">
 						Forum
 					</a>
 				</li>
-				<li class="nav-item  ml-md-4">
-					<a href="#" class="nav-link navbarText">
-						Contact us
+				<li id="profile" class="nav-item dropdown ml-4 d-none">
+					<a class="nav-link dropdown-toggle navbarText " href="#" id="navbarDropdown" role="button"
+					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item navbarText" href="/petzz/order-history">Order History</a>
+						<a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a>
+						<button class="dropdown-item mb-0 navbarText" href="" id="logout" >Logout</button>
+					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
+
 	<!-- row land -->
 	<div class="row  mt-md-2">
 		<div class="col-md-4 offset-md-1">
@@ -210,7 +219,8 @@
 	<!--        </div>-->
 	<!--      </div>-->
 	<!-- footer -->
-	<footer class="ps-2 ">
+	<!-- footer -->
+	<footer id="footer">
 		<div class="row justify-content-center mt-5">
 			<div class="col-md-3 ml-3 ml-md-0">
 				<div class="row ">
@@ -229,19 +239,22 @@
 			<div class="col-md-2 mt-5 mt-md-4 pl-md-5 ">
 				<p class="themeFontMedium ">Company</p>
 				<p class="themeFontLight mb-2">
-					<a href="#"class="text-dark" >Home</a>
+					<a href="/petzz/"class="text-dark" >Home</a>
 				</p>
-				<p class="themeFontRegular mb-2">
-					<a href="#"class="text-dark" >Forum</a>
+				<p class="themeFontLight  mb-2">
+					<a href="/petzz/forum/"class="text-dark" >Forum</a>
 				</p>
 			</div>
 			<div class="col-md-2 mt-5 mt-md-4 ">
 				<p class="themeFontMedium ">Service</p>
 				<p class="themeFontLight mb-2">
-					<a href="#"class="text-dark" >Grooming</a>
+					<a href="/petzz/grooming/"class="text-dark" >Grooming</a>
 				</p>
-				<p class="themeFontRegular mb-2">
-					<a href="#"class="text-dark" >Nutrition Counselling</a>
+				<p class="themeFontLight  mb-2">
+					<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
+				</p>
+				<p class="themeFontLight mb-2">
+					<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
 				</p>
 			</div>
 			<div class="col-md-3 mt-5 mt-md-4">
@@ -253,7 +266,7 @@
 					<a href="#"class="mr-3 text-info" >
 						<i class="fab fa-twitter"></i>
 					</a>
-					<a href="#"class="text-primary" >
+					<a href="#"class="text-primary " >
 						<i class="fab fa-linkedin-in"></i>
 					</a>
 				</p>
@@ -262,6 +275,28 @@
 	</footer>
 
 </div>
+
+<script type="text/javascript">
+
+	var sessionValue = "<?php echo $this->session->userdata('email');?>";
+	if (sessionValue.length == 0) {
+		const ulTag = document.getElementsByClassName('navbar-nav');
+		var node = document.createElement("li");
+		node.className = "nav-item  ml-md-4";
+		var aTag = document.createElement('a');
+		aTag.href = "<?php echo base_url('/petzz/login'); ?>"
+		aTag.className = "nav-link navbarText";
+		aTag.innerHTML = "Login";
+		node.appendChild(aTag);
+		console.log(localStorage.getItem('userInfo'));
+		ulTag[0].appendChild(node);
+	} else {
+		var profileUl = document.getElementById("profile");
+		profileUl.className = "nav-item dropdown ml-4";
+		profileUl.childNodes[1].innerHTML = sessionValue;
+	}
+
+</script>
 
 <!-- link for fontawesome -->
 <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>

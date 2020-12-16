@@ -63,4 +63,5 @@ $route['logout'] = 'Logout/index';
 $route['pet-adoption'] = 'PetAdoption/index';
 $route['404_override'] = '';
 $route['handle_login'] = 'Login/handle_login';
+$route['cart'] = 'Cart';
 $route['translate_uri_dashes'] = FALSE;

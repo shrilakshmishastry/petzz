@@ -63,6 +63,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item navbarText" href="/petzz/order-history">Order History</a>
+						<a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a>
 						<button class="dropdown-item mb-0 navbarText" href="" id="logout" >Logout</button>
 					</div>
 				</li>

@@ -62,45 +62,82 @@
 
 		</div>
 	</nav>
-	<!-- row  for pet Adoption heading -->
-	<div class="row justify-content-center pt-md-5 whoWeArebg ">
-		<div class="col-md-8 text-center">
-			<h1 class="themeFontMedium " >
-				Pets available for
-				<span class="textPrimary"> adoption</span>
-			</h1>
-			<small class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-			</small>
+
+	<!-- row for  cart -->
+	<div class="row  pt-3 pb-5  whoWeArebg ps-md-5">
+		<div class="col-md-8">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<p class="themeFontMedium fs-5">
+						My Cart
+					</p>
+				</li>
+				<?php
+				echo print_r($values);
+				$res = $values['res'];
+				foreach ( $res as $item){
+					?>
+					<li class="list-group-item d-flex flex-column pt-3 pb-3">
+						<div class="d-flex flex-row">
+							<div class="">
+								<img class="img-fluid" src="<?php echo base_url($item->image) ?>" alt="logo">
+							</div>
+							<div class="d-flex flex-column ps-md-3">
+								<div class="">
+									<h6 class="themeFontRegular">
+										<?php
+										echo $item->product_name;
+										?>
+									</h6>
+								</div>
+								<div class="">
+									<small class="themeFontLight text-secondary">
+										<?php
+										echo $item->description;
+										?>
+									</small>
+								</div>
+								<div class="d-flex flex-row mt-2">
+									<div >
+										<img class="img-fluid" src="<?php echo base_url('/petzz/images/price-tag.png') ?>" alt="logo">
+									</div>
+									<div class=" ms-3">
+										₹<?php
+										echo $item->price;
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-end pe-md-5">
+							<a href="#" class="text-danger">
+								REMOVE
+							</a>
+						</div>
+					</li>
+
+				<?php } ?>
+				<li class="list-group-item d-flex flex-row justify-content-between">
+					<div>
+						<p class="themeFontMedium">
+							Total Amount &nbsp; ₹
+							<?php
+							echo $values['total'];
+							?>
+						</p>
+					</div>
+					<div>
+						<button class="themeFontMedium  btn btn-primary">
+							PLACE ORDER
+						</button>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<!-- row for pet show up card -->
-	<div class="row  justify-content-center pt-md-5 pb-md-5  whoWeArebg">
-		<?php
-		foreach ($value as $item){
-			?>
-			<div class="col-lg-2 col-md-4 mt-5 ms-lg-5 col-8 ">
-				<div class="card rounded-3 shadow">
-					<img class="imgCard rounded-3 card-img-top" src="<?php echo base_url($item->product_image) ?>" alt="logo">
-					<div class="card-body cardBodyColor">
-						<p class="textSecondary themeFontMedium fs-6" >
+<!--	row for petstore list-->
+	<div class="row">
 
-							<?php echo $item->product_name ; ?>
-
-						</p>
-						<div class="d-flex flex-row justify-content-between">
-							<?php
-							$myArray = explode(',', $item->description);
-							foreach ($myArray as $val){
-								?>
-								<small class="textSecondary">
-									<?php  echo $val; ?>
-								</small>
-							<?php } ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		<?php } ?>
 	</div>
 	<!-- footer -->
 	<footer class="ps-2 ">

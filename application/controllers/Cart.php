@@ -31,10 +31,20 @@ class Cart extends CI_Controller{
 
 	}
 
-//	public function ()
-//	{
-//
-//	}
+	public function remove_cart_item()
+	{
+		$id = $_POST['id'];
+		$res = $this->CartFunHandler->remove_cart_item($id);
+		echo $res;
+	}
+
+	public function add_cart_item()
+	{
+		$id = $_POST['id'];
+		$email = $this->session->userdata('email');
+		$res = $this->CartFunHandler->add_cart_item($id,$email);
+		echo $res;
+	}
 }
 
 ?>

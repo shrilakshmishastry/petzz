@@ -190,35 +190,14 @@
 						</p>
 
 					</div>
-					<a href="#dietChart" class="bookNowBtn1 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
+					<a href="#dietChart" data-product='<?php echo json_encode($item)?>' class="bookNowBtn1 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
 						Book Know
 					</a>
 				</div>
 			</div>
 		<?php } ?>
 	</div>
-	<!--       row for for forum -->
-	<!--      <div class="row justify-content-center mt-5 whoWeArebg pt-5 pb-5">-->
-	<!--        <div class="col-md-5">-->
-	<!--          <h4 class="themeFontMedium">-->
-	<!--            At <span class="textPrimary">Petzz</span>-->
-	<!--          </h4>-->
-	<!--          <p class="themeFontRegular">-->
-	<!--            We ensure that all our clients have access to the-->
-	<!--             right nutritional counelling via forum-->
-	<!--             to maks sure your pets are healthy and happy.-->
-	<!--          </p>-->
-	<!--        </div>-->
-	<!--        <div class="col-md-5 ">-->
-	<!--          <h3 class="themeFontMedium">-->
-	<!--            Discuss Nutrition Counselling With Experts-->
-	<!--          </h3>-->
-	<!--          <a href="#" class="themeFontMedium mt-3 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5">-->
-	<!--  				    Forum-->
-	<!--  				</a>-->
-	<!--        </div>-->
-	<!--      </div>-->
-	<!-- footer -->
+
 	<!-- footer -->
 	<footer id="footer">
 		<div class="row justify-content-center mt-5">
@@ -305,7 +284,8 @@
 
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+<!--link for grooming js-->
+<script src="<?php echo base_url('/petzz/js/nutrition.js')?>" ></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

@@ -44,16 +44,13 @@
 						Forum
 					</a>
 				</li>
-				<!--				<li class="nav-item  ms-md-4">-->
-				<!--					<a href="#footer" class="nav-link navbarText">-->
-				<!--						Contact us-->
-				<!--					</a>-->
-				<!--				</li>-->
+
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
 					</ul>
@@ -96,6 +93,11 @@
 									<?php  echo $val; ?>
 								</small>
 							<?php } ?>
+						</div>
+						<div>
+							<a href="#" data-product='<?php echo json_encode($item)?>' class="adopt  themeFontRegular mt-3 btn btn-outline-primary btn-sm rounded-pill ">
+								<small>Adopt Now</small>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -162,6 +164,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+<!--link for js-->
+<script src="<?php echo base_url('/petzz/js/adopt.js')?>" ></script>
 <script type="text/javascript">
 
 	var sessionValue = "<?php echo $this->session->userdata('email');?>";

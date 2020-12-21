@@ -52,11 +52,6 @@
 						Forum
 					</a>
 				</li>
-				<!--				<li class="nav-item  ml-md-4">-->
-				<!--					<a href="#footer" class="nav-link navbarText">-->
-				<!--						Contact us-->
-				<!--					</a>-->
-				<!--				</li>-->
 				<li id="profile" class="nav-item dropdown ml-4 d-none">
 					<a class="nav-link dropdown-toggle navbarText " href="#" id="navbarDropdown" role="button"
 					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

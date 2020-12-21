@@ -104,3 +104,9 @@ a{
 .textSmall{
 	font-size: 15px;
 }
+
+.button:focus{
+	outline: none !important;
+	box-shadow: none !important;
+}
+

@@ -29,14 +29,14 @@
 				</li>
 
 				<li class="nav-item dropdown ms-md-4 ">
-					<a class="navbarActive nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<a class="navbarText nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Services
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 						<li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
-						<li><a class="navbarActive dropdown-item" href="#">Pet Adoption</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/pet-adoption/">Pet Adoption</a></li>
 					</ul>
 				</li>
 				<li class="nav-item  ms-md-4">
@@ -44,17 +44,13 @@
 						Forum
 					</a>
 				</li>
-				<!--				<li class="nav-item  ms-md-4">-->
-				<!--					<a href="#footer" class="nav-link navbarText">-->
-				<!--						Contact us-->
-				<!--					</a>-->
-				<!--				</li>-->
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
+						<li><a class="dropdown-item navbarActive" href="/petzz/cart">My Cart</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
 					</ul>
 				</li>
@@ -65,19 +61,41 @@
 
 	<!-- row for  cart -->
 	<div class="row  pt-3 pb-5  whoWeArebg ps-md-5">
-		<div class="col-md-8">
-			<ul class="list-group">
+		<div class="col-md-8 ">
+			<ul class="cartList  list-group">
 				<li class="list-group-item">
 					<p class="themeFontMedium fs-5">
 						My Cart
 					</p>
 				</li>
+
+				<!--				condition to check whether cart is empty-->
 				<?php
-				echo print_r($values);
+
+				if(count($values['res'])==0){
+					?>
+					<li class="noItem list-group-item d-flex flex-row justify-content-around">
+						<div>
+							<p class="themeFontRegular text-secondary fs-6">
+								You don't have any  items in the cart
+							</p>
+						</div>
+						<div>
+							<a  href="/petzz/" class="textPrimary fs-5" >
+								ADD
+							</a>
+						</div>
+					</li>
+					<?php
+				}
+				?>
+				<?php
 				$res = $values['res'];
 				foreach ( $res as $item){
+					$dataProduct = json_encode($item);
 					?>
-					<li class="list-group-item d-flex flex-column pt-3 pb-3">
+					<li id="<?php echo str_replace(" ","",$item->product_name) ?>" class="cart list-group-item d-flex flex-column pt-3 pb-3 cart-item"
+						data-product='<?php echo $dataProduct?> '>
 						<div class="d-flex flex-row">
 							<div class="">
 								<img class="img-fluid" src="<?php echo base_url($item->image) ?>" alt="logo">
@@ -110,90 +128,159 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-end pe-md-5">
-							<a href="#" class="text-danger">
+							<a  id="<?php echo "btn".str_replace(" ","",$item->product_name) ?>" href="#" class="text-danger cart-remove" >
 								REMOVE
 							</a>
 						</div>
 					</li>
 
 				<?php } ?>
-				<li class="list-group-item d-flex flex-row justify-content-between">
-					<div>
-						<p class="themeFontMedium">
-							Total Amount &nbsp; ₹
-							<?php
-							echo $values['total'];
-							?>
-						</p>
-					</div>
-					<div>
-						<button class="themeFontMedium  btn btn-primary">
-							PLACE ORDER
-						</button>
-					</div>
-				</li>
+				<?php
+
+				if(count($values['res'])!=0){
+					?>
+					<li class="totalAmount list-group-item d-flex flex-row justify-content-between">
+						<div>
+							<p class="themeFontMedium">
+								Total Amount &nbsp; ₹
+								<?php
+								echo $values['total'];
+								?>
+							</p>
+						</div>
+					</li>
+					<?php
+				}
+				?>
+
 			</ul>
 		</div>
 	</div>
-<!--	row for petstore list-->
-	<div class="row">
-
-	</div>
-	<!-- footer -->
-	<footer class="ps-2 ">
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-3 ms-3 ms-md-0">
-				<div class="row ">
-					<img class="" src="<?php echo base_url('/petzz/images/logoLarge.png') ?>" alt="logo">
-				</div>
-				<div class="row">
-					<p class="themeFontLight small mt-3 text-left">
-						Petzz offers
-						pet health check-up, Vaccinations,
-						Deworming, Skin treatment, Pet Grooming,
-						Health packages and pet food directly at your doorstep .
+	<!--	row for petstore list-->
+	<div class="row ps-md-5  pt-5 whoWeArebg">
+		<div class="col-md-8 mb-5">
+			<ul  class="list-group bg-white" id="shop">
+				<li class="list-group-item">
+					<p class="themeFontMedium fs-5">
+						Available Shops
 					</p>
+				</li>
+				<?php
+				foreach ($values['pet_store'] as $petShop){
+					?>
+					<li class="list-group-item d-flex flex-column">
+						<p class="themeFontBold">
+							<input type="radio" class="option" name="" id="">
+							&nbsp;<?php
+							echo $petShop->shop_name;
+							?>
+						</p>
+						<p class="themeFontMedium ps-4">
+							<i class="fas fa-map-marker-alt textPrimary"></i>
+							&nbsp; Address:&nbsp;
+							<small class="themeFontRegular">
+								<?php
+								echo $petShop->shop_address;
+								?>
+							</small>
+						</p>
+						<p class="themeFontMedium ps-4">
+							<i class="fas fa-eject textPrimary"></i>
+							&nbsp; Description:&nbsp;
+							<small class="themeFontRegular">
+								<?php
+								echo $petShop->description;
+								?>
+							</small>
+						</p>
+					</li>
+				<?php } ?>
+				<?php
 
-				</div>
+				if(count($values['res'])==0){
+					?>
+					<li class="list-group-item d-flex flex-row justify-content-end" >
+						<div>
+							<button id="placeOrder" class="themeFontMedium  btn btn-primary" disabled>
+								PLACE ORDER
+							</button>
+						</div>
+					</li>
+					<?php
+				}
+				?>
+				<?php
+
+				if(count($values['res'])!=0){
+					?>
+					<li class="list-group-item d-flex flex-row justify-content-end">
+						<div>
+							<button id="placeOrder" class="themeFontMedium  btn btn-primary">
+								PLACE ORDER
+							</button>
+						</div>
+					</li>
+					<?php
+				}
+				?>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<footer class="ps-2 ">
+	<div class="row justify-content-center mt-5">
+		<div class="col-md-3 ms-3 ms-md-0">
+			<div class="row ">
+				<img class="" src="<?php echo base_url('/petzz/images/logoLarge.png') ?>" alt="logo">
 			</div>
-			<div class="col-md-2 mt-5 mt-md-4 ps-md-5 ">
-				<p class="themeFontMedium ">Company</p>
-				<p class="themeFontLight mb-2">
-					<a href="/petzz/"class="text-dark" >Home</a>
+			<div class="row">
+				<p class="themeFontLight small mt-3 text-left">
+					Petzz offers
+					pet health check-up, Vaccinations,
+					Deworming, Skin treatment, Pet Grooming,
+					Health packages and pet food directly at your doorstep .
 				</p>
-				<p class="themeFontLight mb-2">
-					<a href="/petzz/forum"class="text-dark" >Forum</a>
-				</p>
-			</div>
-			<div class="col-md-2 mt-5 mt-md-4 ">
-				<p class="themeFontMedium ">Service</p>
-				<p class="themeFontLight mb-2">
-					<a href="/petzz/grooming"class="text-dark" >Grooming</a>
-				</p>
-				<p class="themeFontLight mb-2">
-					<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
-				</p>
-				<p class="themeFontLight mb-2">
-					<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
-				</p>
-			</div>
-			<div class="col-md-3 mt-5 mt-md-4">
-				<p class="themeFontRegular ">Contact  us on help@petzz.com </p>
-				<p class="themeFontLight mb-2">
-					<a href="#"class="text-dark" >Find us on: </a>
-				</p>
-				<p class="themeFontRegular mb-2 d-flex flex-row">
-					<a href="#"class="me-3 text-info" >
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a href="#"class="text-primary" >
-						<i class="fab fa-linkedin-in"></i>
-					</a>
-				</p>
+
 			</div>
 		</div>
-	</footer>
-</div>
+		<div class="col-md-2 mt-5 mt-md-4 ps-md-5 ">
+			<p class="themeFontMedium ">Company</p>
+			<p class="themeFontLight mb-2">
+				<a href="/petzz/"class="text-dark" >Home</a>
+			</p>
+			<p class="themeFontLight mb-2">
+				<a href="/petzz/forum"class="text-dark" >Forum</a>
+			</p>
+		</div>
+		<div class="col-md-2 mt-5 mt-md-4 ">
+			<p class="themeFontMedium ">Service</p>
+			<p class="themeFontLight mb-2">
+				<a href="/petzz/grooming"class="text-dark" >Grooming</a>
+			</p>
+			<p class="themeFontLight mb-2">
+				<a href="/petzz/nutrition-counselling"class="text-dark" >Nutrition Counselling</a>
+			</p>
+			<p class="themeFontLight mb-2">
+				<a href="/petzz/pet-adoption"class="text-dark" >Pet Adoption</a>
+			</p>
+		</div>
+		<div class="col-md-3 mt-5 mt-md-4">
+			<p class="themeFontRegular ">Contact  us on help@petzz.com </p>
+			<p class="themeFontLight mb-2">
+				<a href="#" class="text-dark" >Find us on: </a>
+			</p>
+			<p class="themeFontRegular mb-2 d-flex flex-row">
+				<a href="#" class="me-3 text-info" >
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="#"class="text-primary" >
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+			</p>
+		</div>
+	</div>
+</footer>
 <!-- link for fontawesome -->
 <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -221,6 +308,13 @@
 		profileUl.childNodes[1].innerHTML = sessionValue;
 	}
 
+
+	$('.option').click(function (){
+		$('.option').not(this).prop('checked', false);
+	});
+
+
 </script>
+<script src="<?php echo  base_url('/petzz/js/cart.js') ?>"></script></script>
 </body>
 </html>

@@ -66,4 +66,5 @@ $route['handle_login'] = 'Login/handle_login';
 $route['cart'] = 'Cart';
 $route['remove-cart-item'] = 'Cart/remove_cart_item';
 $route['add-cart-item'] = 'Cart/add_cart_item';
+$route['place-order'] = 'OrderSuccessFul/place_order';
 $route['translate_uri_dashes'] = FALSE;

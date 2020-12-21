@@ -35,7 +35,13 @@ class Cart extends CI_Controller{
 	{
 		$id = $_POST['id'];
 		$res = $this->CartFunHandler->remove_cart_item($id);
-		echo $res;
+		$email = $this->session->userdata('email');
+		$result = $this->CartFunHandler->get_cart_item($email);
+		$total = 0;
+		foreach ($result as $val){
+			$total+=$val->price;
+		}
+		echo $total;
 	}
 
 	public function add_cart_item()

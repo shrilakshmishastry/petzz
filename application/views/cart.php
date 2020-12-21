@@ -89,6 +89,18 @@
 					<?php
 				}
 				?>
+				<li class=" d-none" id="addItem" >
+					<div>
+						<p class="themeFontRegular text-secondary fs-6">
+							You don't have any  items in the cart
+						</p>
+					</div>
+					<div>
+						<a  href="/petzz/" class="textPrimary fs-5" >
+							ADD
+						</a>
+					</div>
+				</li>
 				<?php
 				$res = $values['res'];
 				foreach ( $res as $item){
@@ -120,9 +132,11 @@
 										<img class="img-fluid" src="<?php echo base_url('/petzz/images/price-tag.png') ?>" alt="logo">
 									</div>
 									<div class=" ms-3">
-										₹<?php
-										echo $item->price;
-										?>
+										<p >₹<?php
+											echo $item->price;
+											?>
+										</p>
+
 									</div>
 								</div>
 							</div>
@@ -141,11 +155,11 @@
 					?>
 					<li class="totalAmount list-group-item d-flex flex-row justify-content-between">
 						<div>
-							<p class="themeFontMedium">
-								Total Amount &nbsp; ₹
-								<?php
-								echo $values['total'];
-								?>
+							<p class="total themeFontMedium">
+								Total Amount &nbsp;₹<?php echo $values['total'];?>
+							</p>
+							<p class=" d-none themeFontMedium" id="total">₹
+
 							</p>
 						</div>
 					</li>

@@ -33,7 +33,6 @@
 						Services
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
 						<li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
 						<li><a class="navbarActive dropdown-item" href="#">Pet Adoption</a></li>
@@ -52,13 +51,14 @@
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
-						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
+						<li><button class="navbarText dropdown-item" id="logout">Logout</button></li>
 					</ul>
 				</li>
 			</ul>
 
 		</div>
 	</nav>
+
 	<!-- row  for pet Adoption heading -->
 	<div class="row justify-content-center pt-md-5 whoWeArebg ">
 		<div class="col-md-8 text-center">
@@ -95,7 +95,9 @@
 							<?php } ?>
 						</div>
 						<div>
-							<a href="#" data-product='<?php echo json_encode($item)?>' class="adopt  themeFontRegular mt-3 btn btn-outline-primary btn-sm rounded-pill ">
+							<a href="#" email="<?php echo $this->session->userdata('email');?>"  data-product='<?php echo json_encode($item)?>'
+							   data-product='<?php echo json_encode($item)?>'
+							   class="adopt  themeFontRegular mt-3 btn btn-outline-primary btn-sm rounded-pill ">
 								<small>Adopt Now</small>
 							</a>
 						</div>
@@ -167,6 +169,7 @@
 
 <!--link for js-->
 <script src="<?php echo base_url('/petzz/js/adopt.js')?>" ></script>
+<script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 <script type="text/javascript">
 
 	var sessionValue = "<?php echo $this->session->userdata('email');?>";
@@ -178,7 +181,7 @@
 		var aTag = document.createElement('a');
 		aTag.className="nav-link navbarText";
 		aTag.innerHTML = "Login";
-		aTag.href = "#";
+		aTag.href = "/petzz/login";
 		node.appendChild(aTag);
 		console.log(localStorage.getItem('userInfo'));
 		ulTag[0].appendChild(node);

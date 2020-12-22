@@ -54,7 +54,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item navbarText" href="/petzz/order-history">Order History</a>
 						<a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a>
-						<button class="dropdown-item mb-0 navbarText" href="" id="logout" >Logout</button>
+						<button class="dropdown-item mb-0 navbarText"  id="logout" >Logout</button>
 					</div>
 				</li>
 			</ul>
@@ -122,7 +122,7 @@
 							</ul>
 						<?php } ?>
 					</div>
-					<a href="#" data-product='<?php echo json_encode($item)?>' class="bookNowBtn2 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
+					<a href="#" email="<?php echo $this->session->userdata('email');?>"  data-product='<?php echo json_encode($item)?>' class="bookNowBtn2 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
 						Book Know
 					</a>
 				</div>
@@ -187,7 +187,7 @@
 </div>
 <script type="text/javascript">
 
-	var sessionValue = "<?php echo $this->session->userdata('email');?>";
+	let sessionValue = "<?php echo $this->session->userdata('email');?>";
 	if (sessionValue.length == 0) {
 		const ulTag = document.getElementsByClassName('navbar-nav');
 		var node = document.createElement("li");
@@ -217,6 +217,7 @@
 
 <!--link for grooming js-->
 <script src="<?php echo base_url('/petzz/js/grooming.js')?>" ></script>
+<script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

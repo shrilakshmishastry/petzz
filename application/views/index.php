@@ -172,19 +172,7 @@
 						<span class="textPrimary">Your Petzz </span>
 					</li>
 				</ul>
-				<!-- <p class="themeFontMedium mt-4 h5">Comprehensive
-					<span class="textPrimary h5" >Petcare</span>
-					Solutions
-				</p>
-				<p class="themeFontMedium h5">
-					<span class="textPrimary">100+ </span>
-					Vets to Solve Your Doubts
-				</p>
-				<p class="themeFontMedium h5">
 
-					Bets Services for
-					<span class="textPrimary">Your Petzz </span>
-				</p> -->
 			</div>
 		</div>
 		<div class="col-lg-2 col-md-1 ">
@@ -232,39 +220,6 @@
 			</a>
 		</div>
 	</div>
-	<!-- row for cat advance
-		<div class="row mt-5 whoWeArebg">
-			<div class="col-md-6 mt-lg-5 mt-md-5  d-none d-sm-block">
-				<img class="img-fluid mt-md-5 mt-lg-0" src="<?php echo base_url('/petzz/images/8.png') ?>" alt="beautiful dog image">
-			</div>
-			<div class="col-md-4 col-lg-4  mt-5">
-				<h5 class="themeFontMedium pr-lg-5 pl-md-4 mr-lg-5">
-					<span class="textPrimary" >Catzz</span>
-					Advanced <br> ₹ 2000 / Year
-				</h5>
-				<ul class="mt-5">
- 					<li class="themeFontMedium h6 ">Full Body Bath</li>
- 					<li class="themeFontMedium h6">Full Body Degreasing</li>
- 					<li class="themeFontMedium h6">Full Body Conditioning</li>
-					<li class="themeFontMedium h6">Blow Drying</li>
-					<li class="themeFontMedium h6">Complete De-Shedding</li>
-					<li class="themeFontMedium h6">Full Body Brushing</li>
-					<li class="themeFontMedium h6">Nail Triming</li>
-					<li class="themeFontMedium h6">Ear Cleaning</li>
-					<li class="themeFontMedium h6">Teeth Brushing</li>
-					<li class="themeFontMedium h6">Tear Stain Cleaning</li>
-					<li class="themeFontMedium h6">Trimming Face, Feet and Sanitary Area</li>
-				</ul>
-			</div>
-			<div class="col-md-2 col-lg-2 ">
-
-			</div>
-			<div class="d-block d-sm-none">
-				<img class="img-fluid" src="<?php echo base_url('/petzz/images/8.png') ?>" alt="beautiful dog image">
-			</div>
-		</div> -->
-	<!-- row for testimonals -->
-
 
 	<div id="carousel" class="styleCarousel mt-5 pb-5 pt-5 carousel slide" data-ride="carousel">
 		<div class="carousel-inner pt-md-5 pb-md-5">

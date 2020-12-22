@@ -34,6 +34,7 @@
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="navbarText dropdown-item" href="/petzz/grooming">Grooming</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling">Nutrition Counselling</a></li>
+						<li><a class="navbarText dropdown-item" href="/petzz/pet-adoption">Pet Adoption</a></li>
 					</ul>
 				</li>
 				<li class="nav-item  ms-md-4">
@@ -41,11 +42,6 @@
 						Forum
 					</a>
 				</li>
-<!--				<li class="nav-item  ms-md-4">-->
-<!--					<a href="#footer" class="nav-link navbarText">-->
-<!--						Contact us-->
-<!--					</a>-->
-<!--				</li>-->
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
@@ -75,7 +71,7 @@
 					</label>
 				</div>
 				<div class="row  ps-3">
-					<input type="text"  name="Email" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Email" value="" placeholder=""  required>
+					<input type="email"  name="Email" class="bg-white border-top-0 border-start-0 border-end-0 border-info "  id="Email" value="" placeholder=""  required>
 				</div>
 				<!-- row for password -->
 				<div class="row  mt-5 ps-3 ">

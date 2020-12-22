@@ -54,7 +54,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item navbarText" href="/petzz/order-history">Order History</a>
 						<a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a>
-						<button class="dropdown-item mb-0 navbarText" href="" id="logout" >Logout</button>
+						<button class="dropdown-item mb-0 navbarText"  id="logout" >Logout</button>
 					</div>
 				</li>
 			</ul>
@@ -190,7 +190,7 @@
 						</p>
 
 					</div>
-					<a href="#dietChart" data-product='<?php echo json_encode($item)?>' class="bookNowBtn1 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
+					<a href="#dietChart" email="<?php echo $this->session->userdata('email');?>" data-product='<?php echo json_encode($item)?>' class="bookNowBtn1 themeFontMedium mt-2 btn btn-outline-primary pl-md-5 rounded-pill pr-md-5 pl-0 pr-0">
 						Book Know
 					</a>
 				</div>
@@ -286,6 +286,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <!--link for grooming js-->
 <script src="<?php echo base_url('/petzz/js/nutrition.js')?>" ></script>
+<script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

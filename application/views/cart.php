@@ -51,7 +51,7 @@
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
 						<li><a class="dropdown-item navbarActive" href="/petzz/cart">My Cart</a></li>
-						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
+						<li><button class="navbarText dropdown-item"id="logout" >Logout</button></li>
 					</ul>
 				</li>
 			</ul>
@@ -108,8 +108,8 @@
 					?>
 					<li id="<?php echo str_replace(" ","",$item->product_name) ?>" class="cart list-group-item d-flex flex-column pt-3 pb-3 cart-item"
 						data-product='<?php echo $dataProduct?> '>
-						<div class="d-flex flex-row">
-							<div class="">
+						<div class="d-flex flex-row ">
+							<div class="" style="width:150px;height: 100px">
 								<img class="img-fluid" src="<?php echo base_url($item->image) ?>" alt="logo">
 							</div>
 							<div class="d-flex flex-column ps-md-3">
@@ -181,8 +181,9 @@
 				</li>
 				<?php
 				foreach ($values['pet_store'] as $petShop){
+					$shopList = json_encode($petShop);
 					?>
-					<li class="list-group-item d-flex flex-column">
+					<li  data-shop='<?php echo $shopList ?>' class="shopPet  list-group-item d-flex flex-column">
 						<p class="themeFontBold">
 							<input type="radio" class="option" name="" id="">
 							&nbsp;<?php
@@ -311,7 +312,7 @@
 		var aTag = document.createElement('a');
 		aTag.className="nav-link navbarText";
 		aTag.innerHTML = "Login";
-		aTag.href = "#";
+		aTag.href = "/petzz/login";
 		node.appendChild(aTag);
 		console.log(localStorage.getItem('userInfo'));
 		ulTag[0].appendChild(node);
@@ -330,5 +331,6 @@
 
 </script>
 <script src="<?php echo  base_url('/petzz/js/cart.js') ?>"></script></script>
+<script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 </body>
 </html>

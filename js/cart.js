@@ -9,6 +9,7 @@ $(document).ready(function() {
 			$('#addItem').removeClass('d-none');
 			$('#addItem').addClass('noItem list-group-item d-flex flex-row justify-content-around');
 			$('.total ').remove();
+			$('#placeOrder').prop('disabled',true);
 		}
 		let cartItem = $(this).closest(".cart-item");
 		let data = cartItem.attr('data-product');
@@ -32,8 +33,7 @@ $(document).ready(function() {
 	$("#placeOrder").on("click",function (){
 		var checkBox = validateCheckBox();
 		// checking atleast one checkBox is selected
-		console.log(checkBox);
-		if(checkBox == 0){
+		if(checkBox == 'noone'){
 			let alertBox =  $("<div></div>").text("Please select a pet shop");
 			alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
 			alertBox.attr("role","alert");
@@ -49,11 +49,11 @@ $(document).ready(function() {
 		}else{
 			let data = [];
 			$('.cart').each(function (idx, element){
-				data.push( JSON.parse($(element).attr("data-product")))
+				data.push( JSON.parse($(element).attr("data-product")));
 			});
-			// console.log(data);
 			$.post('/petzz/place-order',{
 				data : data,
+				shopDetail : checkBox,
 			}).done(function (data,status){
 				let alertBox =  $("<div></div>").text("Order Placed successful");
 				alertBox.addClass("alert alert-success text-center alert-dismissible fade show");
@@ -76,15 +76,14 @@ $(document).ready(function() {
 	
 	function validateCheckBox() {
 		let checkBox = $('.option');
-		console.log(checkBox)
 		// loop to check atleaset one checkBox is checked
 		for (let i=0;i<checkBox.length;i++) {
-			console.log(checkBox[i].checked);
 			if(checkBox[i].checked){
-				return 1;
+				$list = checkBox[i].closest('li');
+				return JSON.parse($list.dataset['shop'])['shop_name'];
 			}
 		}
-		return 0;
+		return 'noone';
 	}
 
 

@@ -42,18 +42,14 @@
 						Forum
 					</a>
 				</li>
-<!--				<li class="nav-item  ms-md-4">-->
-<!--					<a href="#footer" class="nav-link navbarText">-->
-<!--						Contact us-->
-<!--					</a>-->
-<!--				</li>-->
 				<li class="nav-item dropdown ms-md-4 d-none" id="profile">
 					<a class="nav-link dropdown-toggle navbarText" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item navbarText" href="/petzz/cart">My Cart</a></li>
 						<li><a class="navbarText dropdown-item" href="/petzz/order-history/">Order History</a></li>
-						<li><a class="navbarText dropdown-item" href="/petzz/logout/">Logout</a></li>
+						<li><button class="navbarText dropdown-item" id="logout">Logout</button></li>
 					</ul>
 				</li>
 			</ul>

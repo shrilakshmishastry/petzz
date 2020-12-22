@@ -23,7 +23,7 @@ class Signup extends CI_Controller
     // code...
     $this->load->helper('url');
     if (strlen($this->session->userdata('email'))>0){
-    	redirect(base_url('petzz/index.php/Index/home'));
+    	redirect(base_url('/petzz/'));
 	}
     else{
 		$this->load->view('signup');

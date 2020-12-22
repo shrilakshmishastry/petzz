@@ -3,20 +3,43 @@ $(document).ready(function() {
 		event.preventDefault();
 		var email = $('#Email');
 		var password = $('#Password');
-		$.post("/petzz/index.php/Signup/handle_register",{
+		$.post("/petzz/handle_login",{
 			email:email.val(),
 			password: password.val()
-		}).done(function (data,status,name) {
-			console.log(data ,status,name);
-			if(data ==="user exist" ){
-				console.log("user exist",name);
+		}).done(function (data,status) {
+			console.log(data ,status);
+			if(data ==="matched" ){
+				window.location.replace("/petzz/");
 			}
-			else if(data === 'successful'){
-				console.log("success",);
-				localStorage.setItem("name",name);
-				localStorage.setItem("email",email.val());
-				// console.log(localStorage.getItem("name"));
-				window.location.replace("/petzz/index.php/Index/home");
+			else if(data === 'incorrect password'){
+				var alertBox =  $("<div></div>").text("Wrong password entered!!");
+				alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
+				alertBox.attr("role","alert");
+				var button = $("<button></button>");
+				button.addClass("btn-close  text-center text-danger");
+				button.attr({
+					"type":'button',
+					"data-bs-dismiss":"alert",
+					"aria-label":'Close',
+				});
+				alertBox.append(button);
+				$('nav').after(alertBox);
+
+			}
+			else if(data === 'user  does not exist'){
+				var alertBox =  $("<div></div>").text("User doesn't exist. Please signup");
+				alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
+				alertBox.attr("role","alert");
+				var button = $("<button></button>");
+				button.addClass("btn-close  text-center text-danger");
+				button.attr({
+					"type":'button',
+					"data-bs-dismiss":"alert",
+					"aria-label":'Close',
+				});
+				alertBox.append(button);
+				$('nav').after(alertBox);
+
 			}
 
 		})

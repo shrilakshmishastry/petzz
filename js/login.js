@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	$("form").submit(function (event) {
 		event.preventDefault();
-		var email = $('#Email');
-		var password = $('#Password');
+		let email = $('#Email');
+		let password = $('#Password');
 		$.post("/petzz/handle_login",{
 			email:email.val(),
 			password: password.val()
@@ -12,10 +12,10 @@ $(document).ready(function() {
 				window.location.replace("/petzz/");
 			}
 			else if(data === 'incorrect password'){
-				var alertBox =  $("<div></div>").text("Wrong password entered!!");
+				let alertBox =  $("<div></div>").text("Wrong password entered!!");
 				alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
 				alertBox.attr("role","alert");
-				var button = $("<button></button>");
+				let button = $("<button></button>");
 				button.addClass("btn-close  text-center text-danger");
 				button.attr({
 					"type":'button',
@@ -27,10 +27,10 @@ $(document).ready(function() {
 
 			}
 			else if(data === 'user  does not exist'){
-				var alertBox =  $("<div></div>").text("User doesn't exist. Please signup");
+				let alertBox =  $("<div></div>").text("User doesn't exist. Please signup");
 				alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
 				alertBox.attr("role","alert");
-				var button = $("<button></button>");
+				let button = $("<button></button>");
 				button.addClass("btn-close  text-center text-danger");
 				button.attr({
 					"type":'button',

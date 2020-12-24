@@ -1,7 +1,7 @@
 body{
   font-family: 'Poppins', sans-serif;
   padding-bottom: 50px;
-
+    overflow-x: hidden !important;
 }
 .navbarActive{
   color:  #007FFF !important;

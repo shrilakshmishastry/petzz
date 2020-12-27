@@ -58,16 +58,26 @@
 
         </div>
     </nav>
-
+    <!--    row for add question-->
+    <div class="row whoWeArebg ps-md-5 pt-3 pb-5">
+        <div class="col-md-10 ps-lg-5 mt-lg-3 ms-3">
+            <h3 class="themeFontMedium">Brand New
+               <span class="textPrimary">Forum</span>
+                <a href="forum/ask-question" class="badgeLink badge bg-secondary">
+                    Clarify your doubts now!!
+                </a>
+            </h3
+        </div>
+    </div>
     <!-- row for  question list -->
-    <div class="row  pt-3 pb-5   whoWeArebg ps-md-5">
-        <div class="col-md-10 col-10 ">
+    <div class="row  pt-md-3 pb-3 mt-md-3  whoWeArebg ps-md-5">
+        <div class="col-md-10 col-12 ">
             <ul class="list-group ps-md-3 pe-md-3 ">
                 <?php
                 foreach ($values as $val){
                     ?>
-                    <li   class=" border-start-0 border-end-0 list-group-item d-flex flex-column pt-md-4 pb-md-3">
-                        <div class="d-flex flex-row">
+                    <li   class="border-start-0 border-end-0 list-group-item d-flex flex-column pt-4 pb-3">
+                        <div data-question = '<?php echo json_encode($val) ?>' class="d-flex flex-row listQuestion">
                             <div class="">
                                 <i class="fs-1  fas fa-user-circle textPrimary"></i>
                             </div>
@@ -126,6 +136,7 @@
             </div>
         </div>
     </div>
+</div>
     <!-- footer -->
     <footer class="ps-2 ">
         <div class="row justify-content-center mt-5">

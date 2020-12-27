@@ -70,5 +70,5 @@ $route['place-order'] = 'OrderSuccessFul/place_order';
 $route['forum/ask-question'] = 'Qa/index_for_question';
 $route['forum/question'] = 'Qa/ask_question';
 $route['forum/answer'] = 'Qa/answer_Question';
-$route['forum/answer-question'] = 'Qa/index_for_answer';
+$route['forum/answer-question/(:any)'] = 'Qa/index_for_answer/';
 $route['translate_uri_dashes'] = FALSE;

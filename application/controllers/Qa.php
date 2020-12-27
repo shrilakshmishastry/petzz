@@ -21,12 +21,13 @@ class Qa extends CI_Controller{
 
     public function index_for_answer()
     {
+        $url = parse_url($_SERVER['REQUEST_URI']);
         $this->load->helper('url');
-        if (strlen($this->session->userdata('email'))==0){
-            redirect(base_url('/petzz/'));
-        }else{
-            $this->load->view('answer');
-        }
+        preg_match_all('!\d+!', $url['path'], $matches);
+        $res = $this->QaFunHandler->get_answer_list($matches[0][0]);
+        $data['values'] = $res;
+        $this->load->view('answer',$data);
+
     }
 
     public function ask_question()

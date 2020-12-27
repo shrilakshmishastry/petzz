@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.listQuestion').on('click',function () {
+
+        window.location = 'answer-question/'+JSON.parse($(this).attr('data-question')).id;
+    })
     $('form').submit(function (event){
         event.preventDefault();
         if($(this).attr('email')){
@@ -39,8 +43,5 @@ $(document).ready(function () {
             alertBox.append(button);
             $('nav').after(alertBox);
         }
-
-
-
     })
 })

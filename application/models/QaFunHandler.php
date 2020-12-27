@@ -8,9 +8,18 @@ class QaFunHandler extends CI_Model{
         return $res;
     }
 
-    public function addAnswer()
+    public function addAnswer($id,$answer)
     {
-        return "answer";
+        $query = "INSERT INTO answers(question_id,answer) values('$id','$answer') ";
+        $res = $this->db->query($query);
+        return $res;
+    }
+
+    public function get_qa_list()
+    {
+        $query = "SELECT * FROM question";
+        $res = $this->db->query($query);
+        return $res->result();
     }
 }
 

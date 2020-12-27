@@ -41,7 +41,10 @@ class Qa extends CI_Controller{
 
     public function answer_Question()
     {
-
+        $question = json_decode($_POST['question']);
+        $answer = $_POST['answer'];
+        $res = $this->QaFunHandler->addAnswer($question->id,$answer);
+        echo $res;
     }
 }
 

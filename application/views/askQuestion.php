@@ -57,7 +57,7 @@
             </ul>
 
         </div>
-    </nav>    
+    </nav>
     <!--    row for question form-->
     <div class="row pt-5 pb-5 whoWeArebg ps-5 justify-content-center ">
         <div class="col-12 col-md-8 col-lg-8 ">

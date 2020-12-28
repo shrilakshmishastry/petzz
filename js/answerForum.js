@@ -1,15 +1,16 @@
 $(document).ready(function () {
     $('.listQuestion').on('click',function () {
 
-        window.location = 'answer-question/'+JSON.parse($(this).attr('data-question')).id;
+        window.location = 'forum/answer-question/'+JSON.parse($(this).attr('data-question')).id;
     })
     $('form').submit(function (event){
         event.preventDefault();
         if($(this).attr('email')){
-            let btn = $('.ansBtn').attr('data-bs-question');
+            let btn = $('.modal-title ').attr('data-bs-question');
             let text = $('textarea').val();
             console.log(text);
-            $.post('forum/answer',{
+            console.log(btn);
+            $.post('/petzz/forum/answer',{
                 question: btn,
                 answer : text
             }).done(function (data,status){
@@ -28,6 +29,7 @@ $(document).ready(function () {
                 $('.ansBtnClose').click();
             });
         }else{
+            $('.ansBtnClose').click();
             let alertBox =  $("<div></div>").text("Please login!!");
             alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
             alertBox.attr("role","alert");

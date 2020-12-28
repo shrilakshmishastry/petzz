@@ -29,17 +29,17 @@
                 </li>
 
                 <li class="nav-item dropdown ms-md-4 ">
-                    <a class="navbarActive nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="navbarText nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
                         <li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
-                        <li><a class="navbarActive dropdown-item" href="#">Pet Adoption</a></li>
+                        <li><a class="navbarText dropdown-item" href="/petzz/pet-adoption">Pet Adoption</a></li>
                     </ul>
                 </li>
-                <li class="nav-item  ms-md-4">
-                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarText">
+                <li class="nav-item navbarActive  ms-md-4">
+                    <a href="/petzz/forum" class="nav-link navbarActive">
                         Forum
                     </a>
                 </li>
@@ -58,16 +58,17 @@
 
         </div>
     </nav>
+<!--    row for question-->
     <div class="row justify-content-center mt-md-5">
         <?php
         foreach ($values['ques'] as $val){
             ?>
             <div  class="col-md-10  bg-primary text-white border-start-0 border-end-0   pt-4 pb-3 ">
                 <div class="row">
-                    <div class="col-md-1 ms-lg-5 text-center">
+                    <div class="col-md-1 col-2 ms-lg-5 text-center">
                         <i class="fs-1  fas fa-user-circle "></i>
                     </div>
-                    <div class="col-md-8 ">
+                    <div class="col-md-8 col-10">
                         <h6 class="themeFontRegular">
                             <?php
                             echo $val->title;
@@ -80,12 +81,19 @@
                                 ?>
                             </small>
                         </div>
+                        <div class="mt-3 ">
+                            <small class="text-white themeFontLight">
+                                By, <?php
+                                echo $val->user_email;
+                                ?>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
         <?php } ?>
     </div>
-    <!-- row for  question list -->
+    <!-- row for  answer list -->
     <div class="row  pt-md-3 pb-3   whoWeArebg justify-content-center">
         <div class="col-md-10 col-12 ">
             <ul class="list-group ps-md-3 pe-md-3 ">
@@ -94,16 +102,20 @@
                     ?>
                     <li class="border-start-0 border-end-0 list-group-item  pt-4 pb-3">
                         <div   class="row">
-                            <div class="col-md-1 text-center">
+                            <div class="col-2 col-md-1 text-center">
                                 <i class="fs-1  fas fa-user-circle textPrimary"></i>
                             </div>
-                            <div class="col-md-8 ">
-                                <p class="themeFontLight ">
+                            <div class="col-md-11 col-10">
+                                <p class="themeFontRegular ">
                                     <?php
                                     echo $val->answer;
                                     ?>
                                 </p>
-
+                                <small  class="text-secondary">
+                                    By,<?php
+                                    echo $val->answered_by;
+                                    ?>
+                                </small>
                             </div>
                         </div>
                     </li>
@@ -111,6 +123,7 @@
             </ul>
         </div>
     </div>
+</div>
     <!-- footer -->
     <footer class="ps-2 ">
         <div class="row justify-content-center mt-5">

@@ -36,6 +36,8 @@ class Qa extends CI_Controller{
         $email = $this->session->userdata('email');
         echo $email;
         $description = $_POST['description'];
+        echo $title;
+        echo $description;
         $res =   $this->QaFunHandler->addQuestion($title,$description,$email);
         echo $res;
     }
@@ -44,7 +46,9 @@ class Qa extends CI_Controller{
     {
         $question = json_decode($_POST['question']);
         $answer = $_POST['answer'];
-        $res = $this->QaFunHandler->addAnswer($question->id,$answer);
+        echo print_r($question);
+        $email = $this->session->userdata('email');
+        $res = $this->QaFunHandler->addAnswer($question->id,$answer,$email);
         echo $res;
     }
 }

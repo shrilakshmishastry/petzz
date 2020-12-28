@@ -3,14 +3,14 @@
 class QaFunHandler extends CI_Model{
     public function addQuestion($title,$description,$email)
     {
-        $query = " INSERT INTO question (title, description, user_email) values ('$title','$description','$email')";
+        $query = "INSERT INTO question (title,description,user_email) values('$title','$description','$email') ";
         $res = $this->db->query($query);
         return $res;
     }
 
-    public function addAnswer($id,$answer)
+    public function addAnswer($id,$answer,$email)
     {
-        $query = "INSERT INTO answers(question_id,answer) values('$id','$answer') ";
+        $query = "INSERT INTO answers(question_id,answer,answered_by) values('$id','$answer','$email') ";
         $res = $this->db->query($query);
         return $res;
     }

@@ -29,17 +29,17 @@
                 </li>
 
                 <li class="nav-item dropdown ms-md-4 ">
-                    <a class="navbarActive nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="navbarText nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
                         <li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
-                        <li><a class="navbarActive dropdown-item" href="#">Pet Adoption</a></li>
+                        <li><a class="navbarText dropdown-item" href="/petzz/pet-adoption">Pet Adoption</a></li>
                     </ul>
                 </li>
-                <li class="nav-item  ms-md-4">
-                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarText">
+                <li class="nav-item navbarActive ms-md-4">
+                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarActive">
                         Forum
                     </a>
                 </li>
@@ -149,7 +149,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
 <!--link for js-->
-<script src="<?php echo base_url('/petzz/js/adopt.js')?>" ></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/question.js') ?>"></script>
 <script type="text/javascript">

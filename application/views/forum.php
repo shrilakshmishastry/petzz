@@ -140,7 +140,7 @@
 
                         </div>
                         <div class="row text-center mt-4 ">
-                            <div class="col-md-12 bg-primary">
+                            <div class="col-md-12 bgSecondary">
                                 <p class="listQuestion text-white pt-3" data-question = '<?php echo json_encode($val) ?>'>
                                     View all  responses
                                 </p>

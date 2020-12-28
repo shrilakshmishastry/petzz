@@ -21,6 +21,9 @@ a:hover{
 .textPrimary{
   color:  #007FFF !important;
 }
+.bgSecondary{
+    background-color:#44A1FF !important;
+}
 .textSecondary{
 	color:#44A1FF !important;
 }

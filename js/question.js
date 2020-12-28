@@ -21,8 +21,7 @@ $(document).ready(function (){
             alertBox.append(button);
             $('nav').after(alertBox);
             $('.ansBtnClose').click();
-            $('#title').val("");
-            $('#description').val("");
+            window.location.replace("/petzz/forum");
         })
     })
 })

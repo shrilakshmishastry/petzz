@@ -187,7 +187,7 @@
 	<!-- row for book visit -->
 	<div class="row mt-5 justify-content-center ">
 		<div class="col-md-8 text-center  d-none d-sm-block">
-			<a href="#"
+			<a href=" /petzz/nutrition-counselling"
 			   class="bg-primary text-white pt-md-3 pb-md-3 h6 themeFontMedium  btn btn-outline-primary pl-md-5 rounded-pill pr-md-5">
 				Now Book a Service At your Home @499 Rupees
 			</a>
@@ -200,7 +200,7 @@
 				Book a Home Visit With Our
 				Experienced Vets Today.
 			</h5>
-			<a href="#" class="bg-primary text-white  themeFontMedium  btn btn-primary pl-md-5  pr-md-5">
+			<a href="/petzz/nutrition-counselling" class="bg-primary text-white  themeFontMedium  btn btn-primary pl-md-5  pr-md-5">
 				Book Now
 			</a>
 		</div>
@@ -215,7 +215,7 @@
 	</div>
 	<div class="row mt-5 justify-content-center d-block d-sm-none">
 		<div class="col-md-8 text-center">
-			<a href="#"
+			<a href="/petzz/nutrition-counselling"
 			   class="bg-primary text-white pt-md-3 pb-md-3 h6 themeFontMedium  btn btn-outline-primary pl-md-5 rounded-pill pr-md-5">
 				Now Book a Service At your Home @499 Rupees
 			</a>

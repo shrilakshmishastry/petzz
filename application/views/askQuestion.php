@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pet Adoption | Pet Services | Nutrition Counselling</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <link rel="icon" href="<?php echo base_url('/petzz/images/favicon.png') ?>" type="image/png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/petzz/css/style.css')?>">
@@ -29,17 +29,17 @@
                 </li>
 
                 <li class="nav-item dropdown ms-md-4 ">
-                    <a class="navbarActive nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="navbarText nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="navbarText dropdown-item" href="/petzz/grooming/">Grooming</a></li>
                         <li><a class="navbarText dropdown-item" href="/petzz/nutrition-counselling/">Nutrition Counselling</a></li>
-                        <li><a class="navbarActive dropdown-item" href="#">Pet Adoption</a></li>
+                        <li><a class="navbarText dropdown-item" href="/petzz/pet-adoption">Pet Adoption</a></li>
                     </ul>
                 </li>
-                <li class="nav-item  ms-md-4">
-                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarText">
+                <li class="nav-item navbarActive ms-md-4">
+                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarActive">
                         Forum
                     </a>
                 </li>
@@ -57,7 +57,7 @@
             </ul>
 
         </div>
-    </nav>    
+    </nav>
     <!--    row for question form-->
     <div class="row pt-5 pb-5 whoWeArebg ps-5 justify-content-center ">
         <div class="col-12 col-md-8 col-lg-8 ">
@@ -149,7 +149,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
 <!--link for js-->
-<script src="<?php echo base_url('/petzz/js/adopt.js')?>" ></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/question.js') ?>"></script>
 <script type="text/javascript">

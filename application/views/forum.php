@@ -58,187 +58,122 @@
 
         </div>
     </nav>
-
-    <!-- row for  cart -->
-    <div class="row  pt-3 pb-5  whoWeArebg ps-md-5">
-        <div class="col-md-8 ">
-            <ul class="cartList  list-group">
-                <li class="list-group-item">
-                    <p class="themeFontMedium fs-5">
-                        My Cart
-                    </p>
-                </li>
-
-                <!--				condition to check whether cart is empty-->
-                <?php
-
-                if(count($values['res'])==0){
-                    ?>
-                    <li class="noItem list-group-item d-flex flex-row justify-content-around">
-                        <div>
-                            <p class="themeFontRegular text-secondary fs-6">
-                                You don't have any  items in the cart
-                            </p>
-                        </div>
-                        <div>
-                            <a  href="/petzz/" class="textPrimary fs-5" >
-                                ADD
-                            </a>
-                        </div>
-                    </li>
-                    <?php
-                }
-                ?>
-                <li class=" d-none" id="addItem" >
-                    <div>
-                        <p class="themeFontRegular text-secondary fs-6">
-                            You don't have any  items in the cart
-                        </p>
-                    </div>
-                    <div>
-                        <a  href="/petzz/" class="textPrimary fs-5" >
-                            ADD
-                        </a>
-                    </div>
-                </li>
-                <?php
-                $res = $values['res'];
-                foreach ( $res as $item){
-                    $dataProduct = json_encode($item);
-                    ?>
-                    <li id="<?php echo str_replace(" ","",$item->product_name) ?>" class="cart list-group-item d-flex flex-column pt-3 pb-3 cart-item"
-                        data-product='<?php echo $dataProduct?> '>
-                        <div class="d-flex flex-row ">
-                            <div class="" style="width:150px;height: 100px">
-                                <img class="img-fluid" src="<?php echo base_url($item->image) ?>" alt="logo">
-                            </div>
-                            <div class="d-flex flex-column ps-md-3">
-                                <div class="">
-                                    <h6 class="themeFontRegular">
-                                        <?php
-                                        echo $item->product_name;
-                                        ?>
-                                    </h6>
-                                </div>
-                                <div class="">
-                                    <small class="themeFontLight text-secondary">
-                                        <?php
-                                        echo $item->description;
-                                        ?>
-                                    </small>
-                                </div>
-                                <div class="d-flex flex-row mt-2">
-                                    <div >
-                                        <img class="img-fluid" src="<?php echo base_url('/petzz/images/price-tag.png') ?>" alt="logo">
-                                    </div>
-                                    <div class=" ms-3">
-                                        <p >₹<?php
-                                            echo $item->price;
-                                            ?>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end pe-md-5">
-                            <a  id="<?php echo "btn".str_replace(" ","",$item->product_name) ?>" href="#" class="text-danger cart-remove" >
-                                REMOVE
-                            </a>
-                        </div>
-                    </li>
-
-                <?php } ?>
-                <?php
-
-                if(count($values['res'])!=0){
-                    ?>
-                    <li class="totalAmount list-group-item d-flex flex-row justify-content-between">
-                        <div>
-                            <p class="total themeFontMedium">
-                                Total Amount &nbsp;₹<?php echo $values['total'];?>
-                            </p>
-                            <p class=" d-none themeFontMedium" id="total">₹
-
-                            </p>
-                        </div>
-                    </li>
-                    <?php
-                }
-                ?>
-
-            </ul>
+    <!--    row for add question-->
+    <div class="row whoWeArebg ps-md-5 pt-3 pb-5">
+        <div class="col-md-10 ps-lg-5 mt-lg-3 ms-3">
+            <h3 class="themeFontMedium">Brand New
+                <span class="textPrimary">Forum</span>
+                <a href="/petzz/forum/ask-question" class="badgeLink badge bg-secondary">
+                    Clarify your doubts now!!
+                </a>
+            </h3
         </div>
     </div>
-    <!--	row for petstore list-->
-    <div class="row ps-md-5  pt-5 whoWeArebg">
-        <div class="col-md-8 mb-5">
-            <ul  class="list-group bg-white" id="shop">
-                <li class="list-group-item">
-                    <p class="themeFontMedium fs-5">
-                        Available Shops
-                    </p>
+    <!-- row for  question list -->
+    <div class="row  pt-md-3 pb-3 mt-md-3  whoWeArebg ps-md-5">
+        <div class="col-md-10 col-12 ">
+            <ul class="list-group ps-md-3 pe-md-3 ">
+                <li class="mb-4 border-start-0 border-end-0 list-group-item  pt-4 pb-3">
+                    <div class="row">
+                        <div class="col-md-1 offset-lg-1 ">
+                        </div>
+                        <div class="col-md-4  ms-md-5">
+                            <p class="themeFontBold">Discussion</p>
+                        </div>
+                        <div class="col-md-5 col-lg-3 text-center ">
+                            <a href="/petzz/forum/ask-question">
+                                Ask question now!!
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <?php
-                foreach ($values['pet_store'] as $petShop){
-                    $shopList = json_encode($petShop);
+                foreach ($values as $val){
                     ?>
-                    <li  data-shop='<?php echo $shopList ?>' class="shopPet  list-group-item d-flex flex-column">
-                        <p class="themeFontBold">
-                            <input type="radio" class="option" name="" id="">
-                            &nbsp;<?php
-                            echo $petShop->shop_name;
-                            ?>
-                        </p>
-                        <p class="themeFontMedium ps-4">
-                            <i class="fas fa-map-marker-alt textPrimary"></i>
-                            &nbsp; Address:&nbsp;
-                            <small class="themeFontRegular">
-                                <?php
-                                echo $petShop->shop_address;
-                                ?>
-                            </small>
-                        </p>
-                        <p class="themeFontMedium ps-4">
-                            <i class="fas fa-eject textPrimary"></i>
-                            &nbsp; Description:&nbsp;
-                            <small class="themeFontRegular">
-                                <?php
-                                echo $petShop->description;
-                                ?>
-                            </small>
-                        </p>
+                    <li   class="border-start-0 border-end-0 list-group-item pt-4 mb-5 pb-0">
+                        <div class="row">
+                            <div   class="col-md-1 col-1  offset-lg-1 text-center mt-md-4">
+                                <i class="fs-1  fas fa-user-circle textPrimary"></i>
+                            </div>
+                            <div  class="col-md-7 col-11 ">
+                                <div class="d-flex flex-column  ms-3 ms-md-5">
+                                    <div>
+                                        <h6 class="themeFontRegular">
+                                            <?php
+                                            echo $val->title;
+                                            ?>
+                                        </h6>
+                                    </div>
+                                    <div>
+                                        <small class="text-secondary themeFontRegular">
+                                            <?php
+                                            echo $val->description;
+                                            ?>
+                                        </small>
+                                    </div>
+                                    <div class="mt-3 ">
+                                        <small class="text-secondary themeFontLight">
+                                            By, <?php
+                                            echo $val->user_email;
+                                            ?>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 offset-md-1 d-none d-sm-block col-2 mt-lg-5">
+                                <button  type="button" class="btn rounded-pill btn-sm btn-primary ansBtn"
+                                         data-bs-toggle="modal"  data-bs-target="#answer"
+                                         data-bs-question = '<?php echo json_encode($val) ?>'
+                                >
+                                    Answer
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="d-block d-sm-none text-center mt-4">
+                            <button  type="button" class="btn rounded-pill btn-sm btn-primary ansBtn"
+                                     data-bs-toggle="modal"  data-bs-target="#answer"
+                                     data-bs-question = '<?php echo json_encode($val) ?>'
+                            >
+                                Answer
+                            </button>
+
+                        </div>
+                        <div class="row text-center mt-4 ">
+                            <div class="col-md-12 bg-primary">
+                                <p class="listQuestion text-white pt-3" data-question = '<?php echo json_encode($val) ?>'>
+                                    View all  responses
+                                </p>
+                            </div>
+                        </div>
                     </li>
                 <?php } ?>
-                <?php
-
-                if(count($values['res'])==0){
-                    ?>
-                    <li class="list-group-item d-flex flex-row justify-content-end" >
-                        <div>
-                            <button id="placeOrder" class="themeFontMedium  btn btn-primary" disabled>
-                                PLACE ORDER
-                            </button>
-                        </div>
-                    </li>
-                    <?php
-                }
-                ?>
-                <?php
-
-                if(count($values['res'])!=0){
-                    ?>
-                    <li class="list-group-item d-flex flex-row justify-content-end">
-                        <div>
-                            <button id="placeOrder" class="themeFontMedium  btn btn-primary">
-                                PLACE ORDER
-                            </button>
-                        </div>
-                    </li>
-                    <?php
-                }
-                ?>
             </ul>
+        </div>
+        <div class="modal  fade" id="answer" tabindex="-1" aria-labelledby="answerModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog pt-md-5 modal-dialog-centered ">
+                <div class="modal-content">
+                    <div class="modal-header d-flex border-0  flex-column align-items-start">
+                        <button type="button" class="ansBtnClose btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div>
+                            <h5 class="modal-title themeFontRegular" id="answerModalLabel">
+                            </h5>
+                            <small class="description themeFontLight text-secondary"></small>
+                        </div>
+                    </div>
+                    <form email="<?php echo $this->session->userdata('email');?>">
+                        <div class="modal-body border-0 -block">
+                            <textarea  cols="30" maxlength="300" class=" border-top-0 border-start-0 border-end-0 border-primary" required></textarea>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="submit" class="answerBtn btn btn-sm btn-outline-primary" >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -327,10 +262,21 @@
     $('.option').click(function (){
         $('.option').not(this).prop('checked', false);
     });
+    let myModal = document.getElementById('answer');
+    myModal.addEventListener('show.bs.modal',function (event) {
+        let button = event.relatedTarget;
+        let recipient = button.getAttribute('data-bs-question');
+        let modalTitle =    myModal.querySelector('.modal-title');
+        let des = myModal.querySelector('.description');
+        // let btn  = document.getElementById('answerBtn');
+        // btn.setAttribute('data-bs-question',recipient);
+        des.textContent = JSON.parse(recipient).description;
+        modalTitle.textContent = JSON.parse(recipient).title ;
+        modalTitle.setAttribute('data-bs-question',recipient);
 
-
+    })
 </script>
-<script src="<?php echo  base_url('/petzz/js/cart.js') ?>"></script></script>
 <script type="text/javascript" src="<?php echo  base_url('/petzz/js/logout.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/petzz/js/answerForum.js')?>" ></script>
 </body>
 </html>

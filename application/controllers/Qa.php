@@ -13,7 +13,7 @@ class Qa extends CI_Controller{
     {
         $this->load->helper('url');
         if (strlen($this->session->userdata('email'))==0){
-            redirect(base_url('/petzz/'));
+            redirect(base_url('/petzz/forum'));
         }else{
             $this->load->view('askQuestion');
         }

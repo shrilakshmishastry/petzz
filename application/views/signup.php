@@ -78,7 +78,7 @@
 				</label>
 			</div>
 			<div class="row  pl-3">
-				<input type="email" style="text-transform:lowercase" name="Email"  class="bg-white border-top-0 border-end-0 border-start-0 border-info "  id="Email" value="" placeholder=""  required>
+				<input type="email" name="Email" class="bg-white border-top-0 border-end-0 border-start-0 border-info "  id="Email" value="" placeholder=""  required>
 			</div>
 			<!-- row for password -->
 			<div class="row  mt-5 pl-3 ">

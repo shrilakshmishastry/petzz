@@ -32,10 +32,10 @@
 						Services
 					</a>
 					<div class="dropdown-menu " aria-labelledby="dropdown">
-						<a href="/petzz/grooming" class="dropdown-item navbarActive">
+						<a href="/petzz/grooming" class="dropdown-item navbarText">
 							Grooming
 						</a>
-						<a href="<?php echo base_url('#'); ?>" class="dropdown-item navbarText">
+						<a href="<?php echo base_url('#'); ?>" class="dropdown-item navbarActive">
 							Nutrition Counselling
 						</a>
 						<a href="<?php echo base_url('/petzz/pet-adoption'); ?>" class="dropdown-item navbarText">

@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="nav-item  ms-md-4">
-                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarText">
+                    <a href="<?php echo base_url('/petzz/forum/')?>" class="nav-link navbarActive">
                         Forum
                     </a>
                 </li>
@@ -63,7 +63,7 @@
         <div class="col-md-10 ps-lg-5 mt-lg-3 ms-3">
             <h3 class="themeFontMedium">Brand New
                 <span class="textPrimary">Forum</span>
-                <a href="/petzz/forum/ask-question" class="badgeLink badge bg-secondary">
+                <a  class="badgeLink badge bg-secondary">
                     Clarify your doubts now!!
                 </a>
             </h3
@@ -81,7 +81,7 @@
                             <p class="themeFontBold">Discussion</p>
                         </div>
                         <div class="col-md-5 col-lg-3 text-center ">
-                            <a href="/petzz/forum/ask-question">
+                            <a class="askQuestionNow">
                                 Ask question now!!
                             </a>
                         </div>
@@ -238,8 +238,49 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 <script type="text/javascript">
 
-    var sessionValue = "<?php echo $this->session->userdata('email');?>";
-
+    let sessionValue = "<?php echo $this->session->userdata('email');?>";
+    $('.badge').on('click',function () {
+        if(sessionValue.length==0){
+            let alertBox =  $("<div></div>").text("Please login!!");
+            alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
+            alertBox.attr("role","alert");
+            let aTag = $('<a class="ms-md-5" href="/petzz/login">Click here to login.</a>');
+            alertBox.append(aTag);
+            let button = $("<button></button>");
+            button.addClass("btn-close  text-center ");
+            button.attr({
+                "type":'button',
+                "data-bs-dismiss":"alert",
+                "aria-label":'Close',
+            });
+            alertBox.append(button);
+            $('nav').after(alertBox);
+        }
+        else{
+            $(this).attr('href','/petzz/forum/ask-question');
+        }
+    })
+    $('.askQuestionNow').on('click',function () {
+        if(sessionValue.length==0){
+            let alertBox =  $("<div></div>").text("Please login!!");
+            alertBox.addClass("alert alert-danger text-center alert-dismissible fade show");
+            alertBox.attr("role","alert");
+            let aTag = $('<a class="ms-md-5" href="/petzz/login">Click here to login.</a>');
+            alertBox.append(aTag);
+            let button = $("<button></button>");
+            button.addClass("btn-close  text-center ");
+            button.attr({
+                "type":'button',
+                "data-bs-dismiss":"alert",
+                "aria-label":'Close',
+            });
+            alertBox.append(button);
+            $('nav').after(alertBox);
+        }
+        else{
+            $(this).attr('href','/petzz/forum/ask-question');
+        }
+    })
     if (sessionValue.length==0) {
         const ulTag = document.getElementsByClassName('navbar-nav');
         var node = document.createElement("li");

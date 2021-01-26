@@ -5,6 +5,7 @@ $(document).ready(function() {
 	};
 
 	$(".cart-remove").on("click", function (){
+		console.log($('.cartList').children().length);
 		if($('.cartList ').children().length-4 == 0){
 			$('#addItem').removeClass('d-none');
 			$('#addItem').addClass('noItem list-group-item d-flex flex-row justify-content-around');
@@ -13,12 +14,20 @@ $(document).ready(function() {
 		}
 		let cartItem = $(this).closest(".cart-item");
 		let data = cartItem.attr('data-product');
+		console.log(data);
+		$.post('/petzz/remove-cart-item',{
+			id : JSON.parse(data)['cart_id']
+		}).done(function (data,status){
+			$('#total').text("Total Amount "+"\t"+"₹"+data);
+		})
 		cartItem.remove();
 		let total = $('.total').text();
-		console.log($('.total').attr('class'));
+		console.log($('.total').text());
+		console.log($('.total').attr('class')+"hello");
 		if($('.total').attr('class').split(" ")[2]=='d-none'){
-			let sum = parseInt($('#total').text().trim().split(" ")[2].split("₹")[1])-parseInt(JSON.parse(data)['price']);
-			$('#total').text("Total Amount "+"\t"+"₹"+sum);
+			// console.log($('#total').text().trim().split(" "));
+			// let sum = parseInt($('#total').text().trim().split(" ")[4].split("₹")[1])-parseInt(JSON.parse(data)['price']);
+			// $('#total').text("Total Amount "+"\t"+"₹"+sum);
 		}else{
 			let sum = parseInt(total.trim().split(" ")[2].split("₹")[1])-parseInt(JSON.parse(data)['price']);
 			$('#total').removeClass('d-none');
@@ -26,9 +35,7 @@ $(document).ready(function() {
 			$('.total').addClass('d-none');
 		}
 
-		$.post('/petzz/remove-cart-item',{
-			id : JSON.parse(data)['cart_id']
-		});
+
 	});
 	$("#placeOrder").on("click",function (){
 		var checkBox = validateCheckBox();
